@@ -1,0 +1,26 @@
+id: anime-film-v1
+title: 动漫电影
+version: v1.0
+category: [basic]
+tags: [剧场版, 世界观, 大场景]
+description: 开篇/世界观交代用的剧场版质感，自带空气透视纵深。
+input_variables:
+  subject: { default: "two children standing on a hilltop", description: "画面主体" }
+  environment: { default: "a seaside town below a vast summer sky", description: "场景" }
+style:
+  base_system_en: [Japanese anime, anime film]
+  rendering_en: [detailed background art, atmospheric perspective]
+cinematography:
+  lighting_en: [natural sunlight, soft atmospheric haze]
+  camera_en: [extreme wide shot, eye-level camera]
+  environment_en: ["{{environment}}"]
+  mood_en: [nostalgic youthful atmosphere]
+prompt_template: |
+  {{subject}},
+  anime film, detailed background art, atmospheric perspective,
+  natural sunlight, extreme wide shot, eye-level camera,
+  {{environment}}, nostalgic youthful atmosphere
+negative_prompt: [flat empty background, close-up crop, text, watermark]
+suggested_settings:
+  aspect_ratio: "21:9"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

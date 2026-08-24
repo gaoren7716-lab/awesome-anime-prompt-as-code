@@ -1,0 +1,14 @@
+# 案例 02：90年代校园怀旧（档案六案例之一）
+template_ref: prompts/07-cinematic-storytelling/golden-hour-rooftop.yaml + 02-japanese-anime/retro-1980s.yaml 混搭
+input_variables:
+  subject: "a schoolgirl in a summer uniform"
+gpt_image_2: |
+  A schoolgirl in a summer uniform on a Japanese high school rooftop at sunset.
+  Japanese anime, 1990s anime, shoujo manga style, retro cel animation, hand-drawn lineart.
+  Golden hour, warm sunset light, long shadows, medium shot.
+  Nostalgic youthful atmosphere. Do not include: text, watermark, modern digital polish.
+midjourney_niji: |
+  a schoolgirl in a summer uniform, Japanese high school rooftop, Japanese anime,
+  1990s anime, shoujo manga style, retro cel animation, hand-drawn lineart,
+  golden hour, warm sunset light, long shadows, medium shot, nostalgic youthful atmosphere
+  --niji 6 --ar 3:2 --no text, watermark, modern rendering

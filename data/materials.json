@@ -1,0 +1,53 @@
+{
+  "$comment": "L3 材质词典（6 大类）。规则：同方向叠词=增强；矛盾方向混词=打架。禁止重度混用的组合见 conflicts。",
+  "categories": {
+    "linework": {
+      "name_zh": "线稿类",
+      "directions": {
+        "干净精致": ["clean lineart", "fine lineart", "precise linework"],
+        "粗犷有力": ["bold lineart", "rough lineart", "thick outlines"],
+        "自然随性": ["organic linework", "expressive linework", "irregular linework"],
+        "传统手绘": ["ink outlines", "hand-drawn lineart", "pencil linework"]
+      }
+    },
+    "flat-colors": {
+      "name_zh": "平涂类",
+      "words": ["flat colors", "flat color palette", "cel shading", "hard shadows", "two-tone shading", "three-tone shading", "minimal gradients", "sharp shadow edges"],
+      "avoid_with": ["soft shading", "subtle gradients", "soft blending", "rich brush strokes"]
+    },
+    "painterly": {
+      "name_zh": "厚涂类",
+      "words": ["painterly rendering", "painted illustration", "rich brush strokes", "visible brushwork", "textured painting", "textured rendering", "soft blending", "layered brushwork", "detailed rendering"]
+    },
+    "watercolor": {
+      "name_zh": "水彩类",
+      "words": ["watercolor texture", "watercolor illustration", "soft pigments", "soft watercolor washes", "delicate washes", "paint bleeding", "subtle color bleeding", "paper texture", "cold press paper texture"],
+      "notes_zh": "核心三层：颜料(pigments/washes) + 边缘(bleeding) + 纸张(texture)，缺一不可。"
+    },
+    "film": {
+      "name_zh": "胶片类",
+      "words": ["film grain", "subtle grain", "analog texture", "analog color grading", "35mm film look", "cinematic film still", "vintage texture", "faded colors", "aged color palette"],
+      "fit_for": ["复古", "怀旧", "记忆", "黑色电影"],
+      "unfit_for": ["现代精修商业图"]
+    },
+    "paper": {
+      "name_zh": "纸张类",
+      "words": ["paper texture", "paper grain", "rough paper", "sketchbook paper", "traditional illustration texture", "handmade paper texture", "canvas texture", "linen canvas texture"],
+      "notes_zh": "rough paper 配铅笔/彩铅/速写；canvas texture 配厚涂/油画/概念图。"
+    }
+  },
+  "confirmed_combos": [
+    { "style": "现代商业二次元", "combo": ["clean lineart", "soft shading", "subtle gradients", "polished rendering"] },
+    { "style": "传统赛璐璐", "combo": ["clean lineart", "flat colors", "cel shading", "hard shadows"] },
+    { "style": "手绘绘本", "combo": ["organic linework", "watercolor washes", "paper texture", "soft pigments"] },
+    { "style": "复古旧番", "combo": ["rough hand-drawn lineart", "muted colors", "analog texture", "subtle film grain"] },
+    { "style": "游戏原画", "combo": ["painterly rendering", "rich brush strokes", "textured painting", "canvas texture"] }
+  ],
+  "conflicts": [
+    { "pair": ["clean lineart", "rough lineart"], "reason": "线稿方向相反" },
+    { "pair": ["cel shading", "soft blending"], "reason": "硬边分色与柔融混合矛盾" },
+    { "pair": ["flat colors", "rich brush strokes"], "reason": "平涂与厚涂笔触互斥" },
+    { "pair": ["watercolor washes", "hard shadows"], "reason": "水彩无硬阴影" },
+    { "pair": ["highly polished rendering", "heavy film grain"], "reason": "精修与重颗粒矛盾" }
+  ]
+}

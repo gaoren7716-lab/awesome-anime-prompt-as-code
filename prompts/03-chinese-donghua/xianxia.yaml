@@ -1,0 +1,29 @@
+id: xianxia-v1
+title: 国风仙侠
+version: v1.0
+category: [chinese]
+tags: [仙侠, 修仙, 国漫]
+description: 拍人靠近天空：御剑/仙山/ volumetric 光的修仙世界观。
+input_variables:
+  subject: { default: "a sword cultivator standing on a floating cliff", description: "画面主体" }
+  environment: { default: "misty mountains, ancient Chinese architecture", description: "场景" }
+style:
+  base_system_en: [Chinese donghua, xianxia aesthetic]
+  genre_era_en: [Chinese cultivation fantasy]
+  rendering_en: [semi-realistic painterly rendering]
+cinematography:
+  lighting_en: [volumetric light, soft mystical glow]
+  camera_en: [wide cinematic shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [ethereal epic atmosphere]
+prompt_template: |
+  {{subject}},
+  Chinese donghua, xianxia aesthetic, Chinese cultivation fantasy,
+  semi-realistic painterly rendering,
+  volumetric light, soft mystical glow, wide cinematic shot,
+  {{environment}}, ethereal epic atmosphere
+negative_prompt: [western fantasy armor, gothic castle, cyberpunk elements, text, watermark]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]
+notes_zh: 仙侠拍人靠近天空；与东方幻想的区别是强调修行/飞剑体系。

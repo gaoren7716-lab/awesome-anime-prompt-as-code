@@ -1,0 +1,26 @@
+id: soft-shading-v1
+title: 半厚涂
+version: v1.0
+category: [basic]
+tags: [半厚涂, 商业角色, 封面]
+description: clean lineart + 柔过渡的商业封面质感；初期勿与厚涂重度混用。
+input_variables:
+  subject: { default: "an elegant idol singer on stage", description: "画面主体" }
+  environment: { default: "a concert stage with soft spotlights", description: "场景" }
+style:
+  base_system_en: [modern anime]
+  rendering_en: [clean lineart, soft shading, subtle gradients, refined facial features]
+cinematography:
+  lighting_en: [soft stage lighting, rim light]
+  camera_en: [medium close-up]
+  environment_en: ["{{environment}}"]
+  mood_en: [polished glamorous atmosphere]
+prompt_template: |
+  {{subject}},
+  modern anime, clean lineart, soft shading, subtle gradients, refined facial features,
+  soft stage lighting, rim light, medium close-up,
+  {{environment}}, polished glamorous atmosphere
+negative_prompt: [rough brush strokes, heavy texture, sketch lines, text, watermark, extra fingers]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

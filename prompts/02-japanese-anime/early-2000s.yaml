@@ -1,0 +1,28 @@
+id: early-2000s-v1
+title: 2000年代日漫
+version: v1.0
+category: [japanese]
+tags: [千禧年, 赛璐璐数码化]
+description: 数码赛璐璐时代的经典番剧感，大眼高光角色设计。
+input_variables:
+  subject: { default: "a cheerful boy in a school uniform", description: "画面主体" }
+  environment: { default: "a Japanese city street", description: "场景" }
+style:
+  base_system_en: [early 2000s anime]
+  rendering_en: [digital cel shading, clean anime lineart]
+  palette_en: [vibrant colors]
+cinematography:
+  lighting_en: [natural lighting]
+  camera_en: [medium shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [energetic nostalgic atmosphere]
+prompt_template: |
+  {{subject}},
+  early 2000s anime, digital cel shading, clean anime lineart,
+  vibrant colors, expressive large eyes, classic anime character design,
+  natural lighting, medium shot, {{environment}},
+  energetic nostalgic atmosphere
+negative_prompt: [painterly texture, semi-realistic rendering, muted palette, text, watermark]
+suggested_settings:
+  aspect_ratio: "4:3"
+platforms: [midjourney-niji, sdxl]

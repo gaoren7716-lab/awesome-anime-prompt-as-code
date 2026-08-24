@@ -1,0 +1,27 @@
+id: american-cartoon-v1
+title: 美式动画
+version: v1.0
+category: [western]
+tags: [美式卡通, 夸张形体]
+description: bold shapes + stylized character design，靠夸张形体与轮廓辨识度。
+input_variables:
+  subject: { default: "an energetic teen inventor with goggles", description: "画面主体" }
+style:
+  base_system_en: ["western animation", "American cartoon style"]
+  rendering_en: ["stylized character design", "bold shapes", "clean outlines", "expressive facial features"]
+  palette_en: ["vibrant flat colors"]
+cinematography:
+  lighting_en: ["soft lighting"]
+  camera_en: ["medium shot"]
+  environment_en: ["stylized urban background"]
+  mood_en: ["playful expressive atmosphere"]
+prompt_template: |
+  {{subject}},
+  western animation, American cartoon style,
+  stylized character design, bold shapes, clean outlines, expressive facial features,
+  vibrant flat colors, soft lighting, medium shot,
+  stylized urban background, playful expressive atmosphere
+negative_prompt: ["anime eyes", "delicate lineart", "realistic shading", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney", "flux", "jimeng-kling"]

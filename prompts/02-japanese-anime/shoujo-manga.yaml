@@ -1,0 +1,29 @@
+id: shoujo-manga-v1
+title: 少女漫
+version: v1.0
+category: [japanese]
+tags: [少女漫, 浪漫, 柔光]
+description: 纤细比例+大眼高光+柔光情绪特写；与青年漫严格区分。
+input_variables:
+  subject: { default: "a gentle girl with long flowing hair", description: "画面主体" }
+  environment: { default: "a flower field background", description: "场景" }
+style:
+  base_system_en: [shoujo manga style]
+  rendering_en: [delicate lineart]
+  palette_en: [soft pastel colors]
+cinematography:
+  lighting_en: [soft diffused lighting, sparkling highlights]
+  camera_en: [medium close-up]
+  environment_en: ["{{environment}}"]
+  mood_en: [romantic dreamy atmosphere]
+prompt_template: |
+  {{subject}},
+  shoujo manga style, delicate lineart, soft pastel colors,
+  slender proportions, sparkling eyes, floral motifs,
+  soft diffused lighting, sparkling highlights, medium close-up,
+  {{environment}}, romantic dreamy atmosphere
+negative_prompt: [realistic proportions, gritty realism, hard shadows, desaturated colors, text, watermark]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, midjourney-niji, sdxl, jimeng-kling]
+notes_zh: 少女漫=纤细比例+大眼高光+柔光；勿混入写实比例/硬光。

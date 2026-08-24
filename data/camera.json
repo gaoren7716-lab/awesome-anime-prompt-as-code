@@ -1,0 +1,26 @@
+{
+  "$comment": "L5 镜头维度词库。镜头词决定观众站在哪里看，禁止写入 lighting 字段。",
+  "entries": [
+    { "id": "medium-shot", "en": ["medium shot"], "use_zh": "默认叙事视角，多数场景起点" },
+    { "id": "medium-closeup", "en": ["medium close-up"], "use_zh": "情绪与人物并重；少女漫、工笔、彩铅常用" },
+    { "id": "closeup", "en": ["close-up"], "use_zh": "情绪、紧张" },
+    { "id": "extreme-closeup", "en": ["extreme close-up"], "use_zh": "压迫、心理惊悚；末日题材少用" },
+    { "id": "low-angle", "en": ["low angle shot"], "use_zh": "强大、主角感、压迫；赛博/机甲/反派登场标配" },
+    { "id": "high-angle", "en": ["high angle shot", "top-down view"], "use_zh": "弱小、脆弱、被观察" },
+    { "id": "wide", "en": ["wide shot"], "use_zh": "环境叙事；绘本、蓝调孤独增强" },
+    { "id": "extreme-wide", "en": ["extreme wide shot"], "use_zh": "世界观、废土、史诗规模；水墨灵魂镜头" },
+    { "id": "ots-rear", "en": ["over-the-shoulder shot", "rear view"], "use_zh": "私密、窥视、对话；嫌疑人只露背影时用 rear view" },
+    { "id": "dynamic-action", "en": ["dynamic action shot"], "use_zh": "战斗、追逐、爆发" },
+    { "id": "foreshortening", "en": ["foreshortened perspective"], "use_zh": "透视冲击，配合 dynamic action 使用" },
+    { "id": "dutch-angle", "en": ["dutch angle"], "use_zh": "不安、失衡；赛博朋克/恐怖核心组合件" },
+    { "id": "eye-level", "en": ["eye-level camera"], "use_zh": "冷静客观；建立镜头常用" },
+    { "id": "three-quarter-fullbody", "en": ["full body character", "three-quarter view"], "use_zh": "立绘/角色卡标准视角" }
+  ],
+  "cinematic_extras": [
+    "cinematic composition",
+    "dynamic camera angle",
+    "natural camera angle",
+    "foreground raindrops",
+    "foreground depth"
+  ]
+}

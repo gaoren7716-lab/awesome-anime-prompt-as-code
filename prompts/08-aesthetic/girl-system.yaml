@@ -1,0 +1,30 @@
+id: girl-system-v1
+title: 少女系
+version: v1.0
+category: [aesthetic]
+tags: [少女系, 心动感]
+description: 少女系拍人物：delicate lineart + sparkling eyes + soft blush + pastel。
+input_variables:
+  subject: { default: "a smiling girl with rosy cheeks", description: "画面主体" }
+style:
+  base_system_en: ["cute anime girl", "shoujo manga style"]
+  rendering_en: ["delicate lineart", "refined facial features", "sparkling eyes", "soft blush"]
+  palette_en: ["soft pastel palette"]
+cinematography:
+  lighting_en: ["soft diffused lighting", "sparkling highlights"]
+  camera_en: ["medium close-up"]
+  environment_en: ["soft blurred background", "flower petals"]
+  mood_en: ["dreamy gentle atmosphere"]
+prompt_template: |
+  {{subject}},
+  cute anime girl, shoujo manga style,
+  delicate lineart, refined facial features,
+  sparkling eyes, soft blush, soft pastel palette,
+  soft diffused lighting, sparkling highlights,
+  medium close-up, soft blurred background, flower petals,
+  dreamy gentle atmosphere
+negative_prompt: ["realistic proportions", "gritty shading", "dark moody palette", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: ["gpt-image-2", "midjourney-niji", "sdxl", "jimeng-kling"]
+notes_zh: 口诀：梦幻拍情绪 / 少女系拍人物 / 唯美幻想拍世界。

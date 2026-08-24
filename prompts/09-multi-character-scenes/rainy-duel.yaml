@@ -1,0 +1,34 @@
+id: rainy-duel-v1
+title: 雨夜双人对峙
+version: v1.0
+category: [multi-character]
+tags: [多角色, 对决, 雨夜]
+description: 左右对称站位+视线互锁；用剪影差异区分两人身份。
+input_variables:
+  figure_left: { default: "a tall man in a long black coat, short hair" }
+  figure_right: { default: "a lean swordsman with a long ponytail and an open jacket" }
+style:
+  base_system_en: ["dark anime", "cinematic anime"]
+  rendering_en: ["semi-realistic anime", "detailed rendering"]
+cinematography:
+  lighting_en: ["neon lighting", "cold rim light", "wet pavement reflections"]
+  camera_en: ["wide shot", "low angle shot"]
+  environment_en: ["rainy night street", "rain droplets", "two figures facing each other several meters apart"]
+  mood_en: ["tense atmosphere", "ominous mood"]
+prompt_template: |
+  Two characters facing each other in the rain:
+  on the left, {{figure_left}};
+  on the right, {{figure_right}}.
+  Their silhouettes must be clearly distinguishable.
+  dark anime, cinematic anime,
+  semi-realistic anime, detailed rendering,
+  neon lighting, cold rim light, wet pavement reflections,
+  wide shot, low angle shot,
+  rainy night street, rain droplets,
+  tense atmosphere, ominous mood
+negative_prompt: ["identical silhouettes", "crowd of bystanders", "daylight", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "21:9"
+  character_priority: high
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]
+notes_zh: 剪影差异化：一高一瘦、长发/短发、大衣/开衫；明确 left/right 站位词。

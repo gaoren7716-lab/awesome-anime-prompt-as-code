@@ -1,0 +1,33 @@
+id: novel-cover-xianxia-v1
+title: 小说封面（仙侠女主）
+version: v1.0
+category: [narrative]
+tags: [小说封面, 竖版, 留白给标题]
+description: 2:3/9:16 竖版；上方留负空间给书名排版；人物是绝对视觉中心。
+input_variables:
+  heroine: { default: "a heroine in flowing white-and-crimson hanfu, long black hair with a jade hairpin" }
+  title_text: { default: "剑挑山河", description: "封面书名文字" }
+style:
+  base_system_en: ["Chinese donghua", "xianxia aesthetic"]
+  rendering_en: ["semi-realistic painterly rendering", "ornate costume design"]
+cinematography:
+  lighting_en: ["volumetric light", "soft mystical glow"]
+  camera_en: ["medium shot from slightly below"]
+  environment_en: ["misty peaks and floating petals behind her", "clean negative space at the top third for the title"]
+  mood_en: ["ethereal epic atmosphere"]
+prompt_template: |
+  Book cover composition: {{heroine}},
+  positioned in the lower two-thirds of a vertical frame,
+  Chinese donghua, xianxia aesthetic,
+  semi-realistic painterly rendering,
+  volumetric light, soft mystical glow,
+  medium shot from slightly below,
+  misty peaks and floating petals behind her,
+  clean negative space at the top third for the title "{{title_text}}",
+  ethereal epic atmosphere
+negative_prompt: ["busy background covering the top area", "landscape orientation crop", "text artifacts other than the title", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+  character_priority: high
+platforms: ["gpt-image-2", "jimeng-kling", "flux"]
+notes_zh: GPT-Image-2 可直接生成书名文字；MJ/SDXL 只出图，标题后期排版。

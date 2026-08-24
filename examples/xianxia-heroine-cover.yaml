@@ -1,0 +1,19 @@
+# 案例 06：国风仙侠女主封面（小说封面应用展示）
+template_ref: prompts/10-novel-and-short-drama/novel-cover-xianxia.yaml
+input_variables:
+  heroine: "a heroine in flowing white-and-crimson hanfu, long black hair with a jade hairpin"
+  title_text: "剑挑山河"
+gpt_image_2: |
+  Book cover composition: a heroine in flowing white-and-crimson hanfu, long black hair
+  fixed with a jade hairpin, positioned in the lower two-thirds of a vertical frame.
+  Chinese donghua, xianxia aesthetic, semi-realistic painterly rendering,
+  volumetric light, soft mystical glow, medium shot from slightly below,
+  misty peaks and floating petals behind her, clean negative space at the top third,
+  with the title "剑挑山河" rendered in elegant Chinese calligraphy at the top.
+  Ethereal epic atmosphere. Do not include: busy background covering the title area, watermark.
+midjourney_niji: |
+  a heroine in white-and-crimson hanfu, jade hairpin, lower two-thirds composition,
+  misty peaks, floating petals, volumetric light, Chinese donghua, xianxia aesthetic,
+  semi-realistic painterly rendering, ethereal epic atmosphere
+  --niji 6 --ar 2:3 --no text, watermark
+notes_zh: 只有 GPT-Image-2/即梦 能直接渲染书名文字；MJ/SDXL 出图后排版标题。

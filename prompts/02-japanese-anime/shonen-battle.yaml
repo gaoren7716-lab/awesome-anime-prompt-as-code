@@ -1,0 +1,27 @@
+id: shonen-battle-v1
+title: 热血少年漫
+version: v1.0
+category: [japanese]
+tags: [热血, 战斗, 少年漫]
+description: bold lineart + speed lines + dynamic composition 的战斗演出基底。
+input_variables:
+  subject: { default: "a young hero mid-punch with burning aura", description: "画面主体" }
+  environment: { default: "an intense battle background", description: "场景" }
+style:
+  base_system_en: [shonen anime style]
+  rendering_en: [bold lineart]
+  palette_en: [vibrant colors]
+cinematography:
+  lighting_en: [dramatic lighting]
+  camera_en: [dynamic action shot, low angle shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [energetic passionate atmosphere]
+prompt_template: |
+  {{subject}},
+  shonen anime style, dynamic composition, bold lineart, vibrant colors,
+  dramatic lighting, speed lines, dynamic action shot, low angle shot,
+  {{environment}}, energetic passionate atmosphere
+negative_prompt: [static pose, muted colors, realistic proportions, melancholic mood, text, watermark]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: [gpt-image-2, midjourney-niji, sdxl]

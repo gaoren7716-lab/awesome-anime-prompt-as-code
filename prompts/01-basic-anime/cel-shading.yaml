@@ -1,0 +1,28 @@
+id: cel-shading-v1
+title: 赛璐璐平涂
+version: v1.0
+category: [basic]
+tags: [赛璐璐, 传统动画, 干净分色]
+description: 传统动画分色质感；严禁混入柔融/厚涂词。
+input_variables:
+  subject: { default: "a magical girl casting a spell", description: "画面主体" }
+  environment: { default: "a bright rooftop under blue sky", description: "场景" }
+style:
+  base_system_en: [Japanese anime]
+  rendering_en: [cel shading, flat colors, hard shadows, clean lineart]
+conflicts: [soft shading, subtle gradients, soft blending, rich brush strokes]
+cinematography:
+  lighting_en: [bright natural lighting]
+  camera_en: [medium shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [energetic passionate atmosphere]
+prompt_template: |
+  {{subject}},
+  Japanese anime, cel shading, flat colors, hard shadows, clean lineart,
+  bright natural lighting, medium shot,
+  {{environment}}, energetic passionate atmosphere
+negative_prompt: [soft gradients, painterly brush strokes, realistic shading, text, watermark, extra fingers]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: [midjourney-niji, sdxl]
+notes_zh: 赛璐璐是 GPT-Image-2 较难稳定的质感，优先 niji/SDXL 动漫底模。

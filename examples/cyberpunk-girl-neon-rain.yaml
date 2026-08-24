@@ -1,0 +1,17 @@
+# 案例 03：赛博朋克少女（档案六案例之一）
+template_ref: prompts/06-special-and-western/cyberpunk-anime.yaml
+input_variables:
+  subject: "a girl with a neon-lit cybernetic eye"
+gpt_image_2: |
+  A girl with a neon-lit cybernetic eye standing on a rainy futuristic city street.
+  Cyberpunk anime, futuristic urban aesthetic, semi-realistic anime, detailed rendering.
+  Neon lighting, cold rim light, low angle shot, wet pavement reflections.
+  Tense mysterious atmosphere. Do not include: text, watermark, rural elements.
+midjourney_niji: |
+  a girl with a neon-lit cybernetic eye, cyberpunk anime, futuristic urban aesthetic,
+  semi-realistic anime, detailed rendering, neon lighting, cold rim light, low angle shot,
+  rainy futuristic city street, wet pavement reflections, tense mysterious atmosphere
+  --niji 6 --ar 16:9 --no text, watermark
+sdxl:
+  positive: same as MJ without suffixes
+  negative: "daylight, pastel colors, text, watermark, extra fingers"

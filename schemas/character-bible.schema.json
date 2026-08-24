@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gaoren7716-lab.github.io/awesome-anime-prompt-as-code/schemas/character-bible.schema.json",
+  "title": "Character Bible",
+  "description": "Character consistency protocol. Fixed anchors must never be silently edited across scenes; changes require a version bump. See docs/character-consistency.md.",
+  "type": "object",
+  "required": ["id", "name_zh", "anchors", "style_binding"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name_zh": { "type": "string" },
+    "name_en": { "type": "string" },
+    "series_or_project": { "type": "string" },
+    "version": { "type": "string", "pattern": "^v[0-9]+(\\.[0-9]+)?$" },
+
+    "anchors": {
+      "type": "object",
+      "description": "Everything here is FROZEN. Reuse verbatim in every scene featuring this character.",
+      "required": ["identity", "appearance_en", "outfit_en"],
+      "properties": {
+        "identity": { "type": "string", "description": "One-line identity anchor, e.g. 'mature private detective'." },
+        "appearance_en": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 8,
+          "items": { "type": "string" },
+          "description": "Hair, eyes, face, build — concrete visual features only."
+        },
+        "outfit_en": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "signature_props_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Identity props that make the character recognizable (watch, sword, case file...)."
+        },
+        "expression_range_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Allowed expression vocabulary for this character."
+        },
+        "forbidden_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Never-appear items for this character (e.g. smiling brightly, casual hoodie)."
+        }
+      }
+    },
+
+    "style_binding": {
+      "type": "object",
+      "required": ["base_system"],
+      "properties": {
+        "base_system": { "type": "array", "items": { "type": "string" }, "maxItems": 2 },
+        "rendering": { "type": "array", "items": { "type": "string" } },
+        "palette": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "consistency_rules": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Project-specific rules, e.g. 'same seed + same anchor block until first 40% of scene list is generated'."
+    },
+
+    "negative_prompt": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "string" }
+  }
+}

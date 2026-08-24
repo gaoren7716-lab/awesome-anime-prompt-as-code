@@ -1,0 +1,28 @@
+id: battle-dynamic-v1
+title: 战斗动态立绘
+version: v1.0
+category: [game]
+tags: [战斗, 冲击层, 爆发]
+description: 战斗冲击四件套 glowing energy + particles + sparks + debris。
+input_variables:
+  subject: { default: "a sword dancer in mid-strike", description: "画面主体" }
+style:
+  base_system_en: ["anime battle character", "JRPG action art"]
+  rendering_en: ["semi-realistic anime", "dynamic rendering", "bold lineart"]
+cinematography:
+  lighting_en: ["dramatic lighting"]
+  camera_en: ["dynamic action shot", "low angle shot", "foreshortened perspective"]
+  environment_en: ["speed lines", "glowing energy effects", "dynamic particles", "sparks", "flying debris"]
+  mood_en: ["high-energy battle atmosphere"]
+prompt_template: |
+  {{subject}}, flowing clothing, intense expression,
+  anime battle character, JRPG action art,
+  semi-realistic anime, dynamic rendering, bold lineart, dramatic lighting,
+  speed lines, glowing energy effects, dynamic particles, sparks, flying debris,
+  dynamic action shot, low angle shot, foreshortened perspective,
+  high-energy battle atmosphere
+negative_prompt: ["static standing pose", "calm empty background", "pastel softness", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]
+notes_zh: 冲击层 = glowing energy effects + dynamic particles + sparks + flying debris。

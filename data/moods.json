@@ -1,0 +1,15 @@
+{
+  "$comment": "L7 情绪维度词库。铁律：先以光影、镜头、环境、颜色建立情绪，最后只用 1—2 个情绪词点睛（schema 已强制 maxItems:2）。",
+  "avoid_bare_words": ["peaceful", "warm", "cozy", "gentle", "soft", "dreamy", "emotional", "beautiful"],
+  "reason_zh": "裸情绪词空洞且互相稀释；必须用 atmosphere/mood 组合形式。",
+  "entries": [
+    { "id": "peaceful", "words_en": ["peaceful atmosphere", "gentle mood", "cozy atmosphere", "healing anime aesthetic"] },
+    { "id": "lonely", "words_en": ["lonely atmosphere", "melancholic mood", "quiet sadness", "quiet lonely atmosphere"] },
+    { "id": "uneasy", "words_en": ["uneasy atmosphere", "psychological tension", "ominous mood", "quiet tension", "psychological suspense"] },
+    { "id": "epic", "words_en": ["epic atmosphere", "awe-inspiring mood", "majestic presence", "ethereal epic atmosphere"] },
+    { "id": "romantic", "words_en": ["romantic dreamy atmosphere", "bittersweet emotional atmosphere", "nostalgic youthful atmosphere"] },
+    { "id": "energetic", "words_en": ["energetic passionate atmosphere", "high-energy battle atmosphere", "fierce determined atmosphere"] },
+    { "id": "mystic", "words_en": ["wondrous ethereal atmosphere", "enchanting magical atmosphere", "serene contemplative mood"] },
+    { "id": "menacing", "words_en": ["menacing charismatic atmosphere", "dark ominous atmosphere", "disturbing atmosphere"] }
+  ]
+}

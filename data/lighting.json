@@ -1,0 +1,67 @@
+{
+  "$comment": "L4 光影维度词库。backlighting 与 rim light 的区别必须区分使用。",
+  "entries": [
+    {
+      "id": "morning-healing",
+      "name_zh": "清晨治愈",
+      "words_en": ["soft morning sunlight", "early morning light", "sunlight through curtains", "warm natural lighting"]
+    },
+    {
+      "id": "golden-hour",
+      "name_zh": "黄昏情绪",
+      "words_en": ["golden hour", "warm sunset light", "orange glow", "long shadows", "warm orange sky"],
+      "mood_fit": ["青春", "告别", "回忆"],
+      "enhancers_en": ["empty rooftop", "faded colors", "bittersweet mood"]
+    },
+    {
+      "id": "blue-hour",
+      "name_zh": "蓝调孤独",
+      "words_en": ["blue hour", "cool twilight", "dim city lights", "cool ambient lighting", "desaturated blue palette"],
+      "mood_fit": ["孤独", "克制", "都市情绪"],
+      "enhancers_en": ["wide shot", "empty rooftop", "small lone figure"]
+    },
+    {
+      "id": "volumetric-epic",
+      "name_zh": "神圣/史诗",
+      "words_en": ["volumetric lighting", "god rays", "light beams through clouds", "dramatic sky"]
+    },
+    {
+      "id": "neon-night",
+      "name_zh": "赛博夜景",
+      "words_en": ["neon lighting", "colored neon glow", "reflections on wet ground", "wet pavement reflections"]
+    },
+    {
+      "id": "backlight-mystery",
+      "name_zh": "登场/神秘",
+      "words_en": ["backlighting", "rim light", "glowing silhouette"],
+      "distinction_zh": "backlighting=人物整体逆光易成剪影；rim light=仅边缘被勾亮、利于从背景分离。"
+    },
+    {
+      "id": "backlit-poster",
+      "name_zh": "逆光海报感",
+      "words_en": ["strong rim light", "glowing hair", "sun flare", "dramatic silhouette"],
+      "fix_when_face_too_dark": ["soft fill light", "visible facial features", "subtle facial detail"],
+      "mood_fit": ["命运", "登场", "电影海报感"]
+    },
+    {
+      "id": "rainy-night",
+      "name_zh": "雨夜悬疑",
+      "words_en": ["rainy night", "rain droplets", "wet streets", "wet pavement reflections", "neon lighting", "colored neon glow"],
+      "min_layers": 3,
+      "rule_zh": "雨夜至少三层：rain droplets + wet streets + neon reflections。",
+      "mood_fit": ["悬疑", "危机", "情绪爆发"]
+    },
+    {
+      "id": "sunlight-life",
+      "name_zh": "阳光生命力",
+      "words_en": ["natural sunlight", "sun rays", "warm natural lighting", "bright anime scene"],
+      "mood_fit": ["治愈", "日常", "生命力"]
+    },
+    {
+      "id": "low-key-dark",
+      "name_zh": "低调暗光",
+      "words_en": ["low-key lighting", "deep shadows", "cold moonlight", "candlelight glow", "dim lighting"],
+      "rule_zh": "黑暗系避免一团死黑：必须给一个次级光源（月光/烛光/冷边缘光）。"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+# 案例 01：雨夜小巷中的青年漫侦探（项目首个示范案例）
+# 展示：角色锚点 + 镜头语言 + 光影氛围 + 剧情道具 的完整闭环
+template_ref: prompts/07-cinematic-storytelling（seinen 犯罪悬疑基底）
+
+input_variables:
+  protagonist: "a mature private detective"
+  outfit: "tailored charcoal overcoat, leather gloves"
+  prop: "a torn photograph"
+  scene: "narrow rainy urban alley"
+  emotion: "quiet tension, psychological suspense"
+  aspect_ratio: "16:9"
+
+subject:
+  type_en: "mature private investigator"
+  appearance_en: ["sharp jawline", "deep-set eyes", "restrained tense expression"]
+  outfit_en: ["tailored charcoal overcoat", "leather gloves"]
+  props_en: ["torn photograph"]
+  action_en: "looking away from camera"
+
+style:
+  base_system_en: ["dark anime", "seinen manga style"]
+  rendering_en: ["semi-realistic anime", "mature character design", "natural character acting"]
+
+cinematography:
+  lighting_en: ["blue hour", "low-key lighting", "cold rim light", "wet pavement reflections"]
+  camera_en: ["medium shot", "cinematic composition", "foreground raindrops"]
+  environment_en: ["narrow rainy urban alley"]
+  mood_en: ["quiet tension", "psychological suspense"]
+
+composition_notes: 人物居中偏右，左侧留出小巷纵深与雨幕。
+
+# ---------- GPT-Image-2（指令式，负面词改写为规避句） ----------
+gpt_image_2: |
+  A mature private detective standing in a narrow rainy urban alley,
+  wearing a tailored charcoal overcoat and leather gloves, holding a torn photograph,
+  looking away from camera. Dark anime, seinen manga style, animated film still,
+  semi-realistic anime, mature character design, natural character acting.
+  Blue hour, low-key lighting, cold rim light, wet pavement reflections.
+  Medium shot with cinematic composition and foreground raindrops.
+  Desaturated cinematic color grading. Quiet tension, psychological suspense.
+  Do not include: text, watermark, chibi features, neon cyberpunk signs, blood.
+
+# ---------- Midjourney Niji ----------
+midjourney_niji: |
+  a mature private detective standing in a narrow rainy urban alley, tailored charcoal
+  overcoat, leather gloves, holding a torn photograph, seinen manga style, animated film
+  still, semi-realistic anime, natural character acting, blue hour, cold rim light, wet
+  pavement reflections, medium shot, cinematic composition, foreground raindrops,
+  desaturated cinematic color grading, quiet tension, psychological suspense
+  --niji 6 --ar 16:9 --no text, watermark, chibi, blood, neon signs
+
+# ---------- SDXL ----------
+sdxl:
+  positive: |
+    a mature private detective standing in a narrow rainy urban alley, tailored charcoal
+    overcoat, leather gloves, torn photograph, seinen manga style, animated film still,
+    semi-realistic anime, natural character acting, blue hour, cold rim light, wet pavement
+    reflections, medium shot, cinematic composition, foreground raindrops, desaturated
+    cinematic color grading, quiet tension, psychological suspense, masterpiece, best quality
+  negative: |
+    chibi, cute childish expression, exaggerated large sparkling eyes, neon cyberpunk city,
+    excessive saturation, gore, blood splatter, extra fingers, malformed hands, duplicated
+    limbs, text, subtitles, watermark, logo, blurry face, low resolution
+  settings: { steps: 30, cfg: 6.0, sampler: "DPM++ 2M Karras" }

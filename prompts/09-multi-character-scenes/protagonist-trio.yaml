@@ -1,0 +1,35 @@
+id: protagonist-trio-v1
+title: 主角团三人出场
+version: v1.0
+category: [multi-character]
+tags: [多角色, 团队, 出场]
+description: 三人站位=主中副两侧；身高/发色/服装三重差异锁死不撞脸。
+input_variables:
+  leader: { default: "the leader in the center, tall, spiky orange hair, red jacket, confident grin" }
+  mage_left: { default: "on the left, a shorter mage with long silver hair and a blue robe, calm expression" }
+  fighter_right: { default: "on the right, a muscular fighter with a buzz cut and scars, brown armor, arms crossed" }
+style:
+  base_system_en: ["shonen anime style"]
+  rendering_en: ["bold lineart", "vibrant colors", "polished character design"]
+cinematography:
+  lighting_en: ["dramatic backlighting", "rim light on each character"]
+  camera_en: ["low angle shot", "group composition"]
+  environment_en: ["wind-blown cloaks", "battlefield horizon behind them"]
+  mood_en: ["energetic passionate atmosphere"]
+prompt_template: |
+  A three-person hero team entrance shot:
+  {{leader}};
+  {{mage_left}};
+  {{fighter_right}}.
+  Each character must have distinct height, hair color and outfit silhouette.
+  shonen anime style, bold lineart, vibrant colors,
+  dramatic backlighting, rim light on each character,
+  low angle shot, group composition,
+  wind-blown cloaks, battlefield horizon behind them,
+  energetic passionate atmosphere
+negative_prompt: ["same face syndrome", "identical outfits", "more than three people", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+  character_priority: high
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]
+notes_zh: 人数是硬约束：negative 里写 more than three people；站位用 center/left/right 显式声明。

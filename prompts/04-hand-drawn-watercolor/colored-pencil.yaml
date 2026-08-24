@@ -1,0 +1,26 @@
+id: colored-pencil-v1
+title: 彩铅动漫
+version: v1.0
+category: [hand-drawn]
+tags: [彩铅, 温馨日常]
+description: soft colored pencil strokes + layered shading；适合温馨日常，不适合强冲突。
+input_variables:
+  subject: { default: "a girl reading by a sunny window", description: "画面主体" }
+style:
+  base_system_en: ["colored pencil illustration"]
+  rendering_en: ["paper texture", "soft colored pencil strokes", "layered pencil shading", "subtle grain"]
+cinematography:
+  lighting_en: ["warm ambient lighting"]
+  camera_en: ["medium close-up"]
+  environment_en: ["cozy indoor setting"]
+  mood_en: ["gentle nostalgic mood"]
+prompt_template: |
+  anime character, {{subject}},
+  colored pencil illustration, paper texture, soft colored pencil strokes,
+  layered pencil shading, subtle grain,
+  warm ambient lighting, medium close-up, cozy indoor setting,
+  gentle nostalgic mood
+negative_prompt: ["digital smooth gradients", "neon colors", "action scene energy", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "4:3"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "jimeng-kling"]

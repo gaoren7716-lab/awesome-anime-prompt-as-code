@@ -1,0 +1,18 @@
+# 案例 04：水墨武侠·孤剑客（档案六案例之一）
+template_ref: prompts/03-chinese-donghua/ink-wash-wuxia.yaml
+input_variables:
+  subject: "a lone swordsman"
+  action: "dynamic martial arts pose"
+gpt_image_2: |
+  A lone swordsman in a dynamic martial arts pose on a misty mountain path.
+  Chinese ink wash animation, wuxia aesthetic, ink painting style,
+  expressive brush strokes, generous negative space, subtle paper texture,
+  soft diffused lighting, extreme wide shot. Serene tense atmosphere.
+  The figure is small within the vast landscape. Do not include: text, watermark,
+  vibrant saturated colors, thick outlines, cel shading.
+midjourney_niji: |
+  a lone swordsman, dynamic martial arts pose, misty mountain path, Chinese ink wash
+  animation, wuxia aesthetic, expressive brush strokes, negative space, subtle paper
+  texture, extreme wide shot, serene tense atmosphere
+  --niji 6 --ar 21:9 --no colors, outlines, cel shading, text, watermark
+notes_zh: 水墨的 negative 里 "colors" 是刻意压制饱和度；水墨=少即是多。

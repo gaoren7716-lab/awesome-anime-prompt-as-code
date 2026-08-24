@@ -1,0 +1,21 @@
+# 案例 05：审讯室双人对峙（多角色差异化展示）
+template_ref: prompts/09-multi-character-scenes/interrogation-room.yaml
+input_variables:
+  detective: "a calm detective with slicked-back hair and round glasses"
+  suspect: "a restless young man with messy dyed hair and a hoodie"
+gpt_image_2: |
+  Two characters in one frame inside a dim interrogation room:
+  on the left, a calm detective with slicked-back hair and round glasses, seated with his
+  back mostly to camera; on the right, a restless young man with messy dyed hair in a
+  hoodie, facing the camera in sharp focus. A metal table between them, bare concrete walls,
+  a single overhead lamp casting hard shadows on faces.
+  Seinen manga style, animated film still, semi-realistic anime, mature character design.
+  The two characters must have clearly different hair, clothing silhouettes and posture.
+  Quiet tension, psychological suspense. Do not include: identical faces, bright colors,
+  text, watermark.
+midjourney_niji: |
+  two characters in a dim interrogation room, calm detective with round glasses back to
+  camera on the left, restless young man in hoodie facing camera on the right, metal table
+  between them, single overhead lamp, hard shadows, seinen manga style, animated film still,
+  quiet tension --niji 6 --ar 16:9 --no identical faces, bright colors, text, watermark
+notes_zh: 多角色铁律——写明左右站位、谁背对镜头、发型服装轮廓差异；negative 禁 same face。

@@ -1,0 +1,27 @@
+id: pure-hand-drawn-v1
+title: 纯手绘动画
+version: v1.0
+category: [hand-drawn]
+tags: [手绘, 2D, 有机线条]
+description: 核心 organic linework + natural imperfections；避免一切"完美线稿"词。
+input_variables:
+  subject: { default: "a boy and his bicycle on a country road", description: "画面主体" }
+style:
+  base_system_en: ["hand-drawn animation", "traditional 2D animation"]
+  rendering_en: ["organic linework", "natural imperfections", "painted background", "subtle texture"]
+cinematography:
+  lighting_en: ["soft natural lighting"]
+  camera_en: ["medium shot"]
+  environment_en: ["countryside landscape"]
+  mood_en: ["warm nostalgic mood"]
+prompt_template: |
+  {{subject}},
+  hand-drawn animation, traditional 2D animation,
+  organic linework, natural imperfections, painted background, subtle texture,
+  soft natural lighting, medium shot,
+  countryside landscape, warm nostalgic mood
+negative_prompt: ["clean lineart", "perfect linework", "sharp outlines", "ultra polished", "hyper detailed", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]
+notes_zh: 手绘家族通用避坑：clean/perfect lineart、sharp outlines、ultra polished、hyper detailed。

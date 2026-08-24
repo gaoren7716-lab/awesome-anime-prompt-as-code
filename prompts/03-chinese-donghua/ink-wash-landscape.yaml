@@ -1,0 +1,26 @@
+id: ink-wash-landscape-v1
+title: 水墨山水意境
+version: v1.0
+category: [chinese]
+tags: [水墨, 山水, 孤旅]
+description: 无战斗叙事的水墨风景版：lone traveler + misty mountain landscape。
+input_variables:
+  subject: { default: "a lone traveler with a straw hat", description: "画面主体（宜小）" }
+style:
+  base_system_en: [Chinese ink wash animation, ink painting style]
+  rendering_en: ["expressive brush strokes", "flowing ink", "negative space", "subtle paper texture"]
+cinematography:
+  lighting_en: ["soft diffused lighting"]
+  camera_en: ["extreme wide shot"]
+  environment_en: ["misty mountain landscape"]
+  mood_en: ["serene contemplative mood"]
+prompt_template: |
+  {{subject}},
+  Chinese ink wash animation, ink painting style,
+  expressive brush strokes, flowing ink, negative space, subtle paper texture,
+  soft diffused lighting, extreme wide shot,
+  misty mountain landscape, serene contemplative mood
+negative_prompt: ["vibrant colors, heavy outlines, dense detail everywhere", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

@@ -1,0 +1,33 @@
+{
+  "$comment": "L6 环境维度词库。环境是剧情容器：先定视觉中心，再选环境。",
+  "mood_sets": [
+    {
+      "mood_zh": "孤独",
+      "words_en": ["empty street", "abandoned building", "deserted train station", "wide open landscape", "urban rooftop"]
+    },
+    {
+      "mood_zh": "温暖",
+      "words_en": ["cozy bedroom", "quiet cafe", "bookstore corner", "sunlit kitchen", "cozy indoor setting"]
+    },
+    {
+      "mood_zh": "压迫",
+      "words_en": ["narrow alley", "dim interrogation room", "dark corridor", "crowded subway platform", "narrow rainy urban alley"]
+    },
+    {
+      "mood_zh": "自由",
+      "words_en": ["flower field", "coastal landscape", "mountain trail", "open sky", "lush greenery"]
+    }
+  ],
+  "signature_environments": [
+    { "id": "school-rooftop", "en": ["Japanese high school rooftop", "gentle wind", "wind-blown hair"], "fit_zh": "青春/黄昏/回忆" },
+    { "id": "rainy-city-street", "en": ["rainy city street", "wet streets", "neon reflections"], "fit_zh": "悬疑/雨夜" },
+    { "id": "misty-mountains", "en": ["misty mountains", "ancient Chinese architecture", "misty mountain path"], "fit_zh": "仙侠/武侠/水墨" },
+    { "id": "traditional-garden", "en": ["traditional Chinese garden"], "fit_zh": "工笔" },
+    { "id": "industrial-hangar", "en": ["industrial hangar", "futuristic battlefield"], "fit_zh": "机甲" },
+    { "id": "futuristic-cityscape", "en": ["futuristic cityscape", "rain-soaked streets"], "fit_zh": "赛博朋克" },
+    { "id": "gothic-interior", "en": ["dim gothic interior", "mysterious gothic cathedral environment"], "fit_zh": "黑暗奇幻/反派登场" },
+    { "id": "ruined-city", "en": ["ruined city", "abandoned buildings"], "fit_zh": "末日" },
+    { "id": "fantasy-realm", "en": ["ancient floating ruins", "luminous forest", "ancient mystical realm"], "fit_zh": "唯美幻想/东方幻想" },
+    { "id": "battlefield", "en": ["battlefield background", "intense battle environment"], "fit_zh": "热血战斗" }
+  ]
+}

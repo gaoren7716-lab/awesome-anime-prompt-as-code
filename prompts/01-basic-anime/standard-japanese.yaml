@@ -1,0 +1,26 @@
+id: standard-japanese-v1
+title: 标准日漫
+version: v1.0
+category: [basic]
+tags: [日漫, 基础质感, 通用起点]
+description: 默认通用起点，适合角色图、头像、日常向插画。
+input_variables:
+  subject: { default: "a high school girl with short black hair", description: "画面主体" }
+  environment: { default: "a quiet classroom", description: "场景" }
+style:
+  base_system_en: [Japanese anime]
+  rendering_en: [anime illustration, clean lineart]
+cinematography:
+  lighting_en: [soft natural lighting]
+  camera_en: [medium shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [gentle mood]
+prompt_template: |
+  {{subject}},
+  Japanese anime, anime illustration, clean lineart,
+  soft natural lighting, medium shot,
+  {{environment}}, gentle mood
+negative_prompt: [text, watermark, extra fingers, malformed hands, blurry, low resolution]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

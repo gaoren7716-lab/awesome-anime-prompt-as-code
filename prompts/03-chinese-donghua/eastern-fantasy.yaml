@@ -1,0 +1,27 @@
+id: eastern-fantasy-v1
+title: 东方幻想
+version: v1.0
+category: [chinese]
+tags: [神话志怪, 神兽, 奇观]
+description: 不强调修行飞剑，重点是神话、志怪、神兽与世界奇观（区别于仙侠）。
+input_variables:
+  subject: { default: "a priestess beside a mythical creature", description: "画面主体" }
+  environment: { default: "ancient mystical realm with mystical architecture", description: "场景" }
+style:
+  base_system_en: [Chinese fantasy animation, eastern fantasy aesthetic]
+  rendering_en: [painterly rendering, ornate costume design]
+cinematography:
+  lighting_en: [volumetric lighting, mystical glow]
+  camera_en: [wide cinematic shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [wondrous ethereal atmosphere]
+prompt_template: |
+  {{subject}},
+  Chinese fantasy animation, eastern fantasy aesthetic,
+  painterly rendering, ornate costume design, mythical creature,
+  volumetric lighting, mystical glow, wide cinematic shot,
+  {{environment}}, wondrous ethereal atmosphere
+negative_prompt: [flying swords, cultivation robes cliché, sci-fi elements, text, watermark]
+suggested_settings:
+  aspect_ratio: "21:9"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

@@ -1,0 +1,87 @@
+{
+  "$comment": "模型适配层：同一份 YAML 模板在不同平台的转换规则。核心认知：GPT-Image-2 是指令模型（无负向字段、擅长文字渲染）；Midjourney 动漫默认 --niji 6；SDXL 才保留经典负向词字段。",
+  "platforms": [
+    {
+      "id": "gpt-image-2",
+      "name_zh": "GPT-Image-2",
+      "prompt_style": "instruction-natural",
+      "supports_negative_field": false,
+      "negative_strategy": "rewrite_as_instruction",
+      "transform_rules": [
+        "把 YAML 各层拼接成一段自然语言描述，保持 层级顺序：主体→风格→光影→镜头→环境→情绪。",
+        "负面词改写为追加约束句：'Do not include: ...' 或 'Avoid ...'。",
+        "需要画面内出现文字（标题/招牌）时直接用引号写出文本内容，GPT-Image-2 文字渲染能力强。",
+        "不需要权重语法与 steps/cfg；比例用尺寸参数表达。"
+      ],
+      "defaults": { "aspect_ratio": "16:9", "size_hint": "1536x1024 (landscape) / 1024x1536 (portrait)" }
+    },
+    {
+      "id": "midjourney-niji",
+      "name_zh": "Midjourney Niji（动漫默认）",
+      "prompt_style": "tags-plus",
+      "supports_negative_field": false,
+      "negative_strategy": "--no parameter",
+      "transform_rules": [
+        "动漫题材默认使用 --niji 6，而非 --v 系列。",
+        "YAML 负面词映射到 --no a, b, c（取前 6-8 条，过多会稀释权重）。",
+        "比例用 --ar 16:9 / 2:3 追加在末尾。",
+        "可用 :: 权重微调，但初版模板不默认启用。",
+        "风格词保留英文原文即可，niji 对 anime 词汇原生友好。"
+      ],
+      "defaults": { "version": "--niji 6", "aspect_ratio_suffix": "--ar {aspect_ratio}" }
+    },
+    {
+      "id": "midjourney",
+      "name_zh": "Midjourney（通用 v7）",
+      "prompt_style": "tags-plus",
+      "supports_negative_field": false,
+      "negative_strategy": "--no parameter",
+      "notes_zh": "仅当目标偏写实/厚涂概念图时用 --v 7 + --style raw；纯动漫仍建议 niji。"
+    },
+    {
+      "id": "flux",
+      "name_zh": "Flux (dev/pro)",
+      "prompt_style": "natural-longform",
+      "supports_negative_field": false,
+      "negative_strategy": "positive_counter_description",
+      "transform_rules": [
+        "扩写成完整句子段落，T5 编码器吃长自然语言。",
+        "无负向通道：高风险词转正向对冲（如 'five fingers on each hand'）。",
+        "guidance 3.0-4.0，过高易过饱和。"
+      ],
+      "defaults": { "guidance": 3.5 }
+    },
+    {
+      "id": "sdxl",
+      "name_zh": "SDXL / 二次元微调模型",
+      "prompt_style": "tags",
+      "supports_negative_field": true,
+      "negative_strategy": "native negative_prompt field",
+      "transform_rules": [
+        "正向按标签逗号分隔，可加质量词（masterpiece, best quality 视底模而定）。",
+        "负面词原样填入 negative prompt。",
+        "搭配动漫系 checkpoint/LoRA 使用效果更稳。"
+      ],
+      "defaults": { "steps": 30, "cfg": 6.0, "sampler": "DPM++ 2M Karras" }
+    },
+    {
+      "id": "jimeng-kling",
+      "name_zh": "即梦 / 可灵",
+      "prompt_style": "chinese-native",
+      "supports_negative_field": true,
+      "negative_strategy": "中文负面输入框",
+      "transform_rules": [
+        "可直接翻译整段为中文描述，保留锚点词的中文对应。",
+        "负面词填入独立负面框。",
+        "比例在界面/API 参数中选择。"
+      ]
+    }
+  ],
+  "delivery_format": [
+    "中文说明（一句话：这是什么、适合什么场景）",
+    "英文正向提示词",
+    "英文负面提示词",
+    "参数建议"
+  ],
+  "$comment_delivery": "交付格式继承自项目交接规则第 6 条，所有平台输出统一走这四段式。"
+}

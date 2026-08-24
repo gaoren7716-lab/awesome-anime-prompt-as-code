@@ -1,0 +1,29 @@
+id: dark-fantasy-western-v1
+title: 黑暗奇幻
+version: v1.0
+category: [western, special]
+tags: [黑暗奇幻, 哥特]
+description: gothic atmosphere + 次级光源（月光/烛光），避免一团死黑。
+input_variables:
+  subject: { default: "a knight in ornate dark armor", description: "画面主体" }
+style:
+  base_system_en: ["dark fantasy animation"]
+  genre_era_en: ["gothic atmosphere"]
+  rendering_en: ["detailed textured rendering", "ornate dark armor"]
+cinematography:
+  lighting_en: ["low-key lighting", "cold moonlight", "candlelight glow"]
+  camera_en: ["medium shot", "low angle shot"]
+  environment_en: ["mysterious gothic cathedral environment"]
+  mood_en: ["dark ominous atmosphere"]
+prompt_template: |
+  {{subject}},
+  dark fantasy animation, gothic atmosphere,
+  detailed textured rendering, ornate dark armor,
+  dramatic shadows, low-key lighting,
+  cold moonlight, candlelight glow,
+  medium shot, low angle shot,
+  mysterious gothic cathedral environment, dark ominous atmosphere
+negative_prompt: ["pitch black void background", "bright cheerful colors", "chibi proportions", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: ["gpt-image-2", "midjourney", "flux", "sdxl"]

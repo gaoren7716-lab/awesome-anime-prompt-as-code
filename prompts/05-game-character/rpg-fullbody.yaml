@@ -1,0 +1,27 @@
+id: rpg-fullbody-v1
+title: RPG 全身立绘（设定图）
+version: v1.0
+category: [game]
+tags: [概念图, 装备分层, 设定]
+description: 概念设计向：clear silhouette + readable costume layers，供美术设定用。
+input_variables:
+  subject: { default: "a wandering ranger with bow and quiver", description: "画面主体" }
+style:
+  base_system_en: ["fantasy RPG character illustration", "anime game art"]
+  rendering_en: ["detailed rendering", "textured painting"]
+cinematography:
+  lighting_en: ["natural atmospheric lighting"]
+  camera_en: ["full body shot", "three-quarter view"]
+  environment_en: ["clear silhouette", "readable costume layers", "fantasy background", "character concept art"]
+  mood_en: ["immersive atmosphere"]
+prompt_template: |
+  {{subject}},
+  fantasy RPG character illustration, anime game art,
+  full body character design, detailed rendering, textured painting,
+  clear silhouette, readable costume layers,
+  natural atmospheric lighting, full body shot, three-quarter view,
+  fantasy background, character concept art, immersive atmosphere
+negative_prompt: ["busy composition hiding the silhouette", "close-up crop", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "9:16"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]

@@ -1,0 +1,29 @@
+id: film-still-v1
+title: 动漫电影截图感
+version: v1.0
+category: [cinematic]
+tags: [截图感, 自然演技]
+description: 关键是 natural character acting；适合分镜与短剧首帧。
+input_variables:
+  subject: { default: "a young woman pausing at a doorway", description: "画面主体+动作" }
+style:
+  base_system_en: ["animated film still", "cinematic anime frame"]
+  rendering_en: ["semi-realistic anime", "natural character acting", "candid moment"]
+cinematography:
+  lighting_en: ["cinematic lighting", "soft rim light"]
+  camera_en: ["medium close-up", "natural camera angle"]
+  environment_en: ["detailed realistic background"]
+  mood_en: ["muted cinematic tone"]
+prompt_template: |
+  {{subject}},
+  animated film still, cinematic anime frame,
+  semi-realistic anime, natural character acting,
+  subtle facial expression, candid moment,
+  cinematic lighting, soft rim light,
+  medium close-up, natural camera angle,
+  detailed realistic background, subtle film grain, muted cinematic tone
+negative_prompt: ["posed stiff expression", "looking at camera smiling", "oversaturated colors", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]
+notes_zh: 可加动作：looking away from camera / holding a phone tightly / walking through the rain。

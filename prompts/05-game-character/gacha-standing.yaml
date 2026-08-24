@@ -1,0 +1,29 @@
+id: gacha-standing-v1
+title: 抽卡角色立绘
+version: v1.0
+category: [game]
+tags: [抽卡, 手游立绘, 特效]
+description: 角色优先+魔法特效；semi-realistic 别过重，否则变泛概念插画。
+input_variables:
+  subject: { default: "a fire-element mage girl", description: "画面主体" }
+style:
+  base_system_en: ["modern anime", "anime mobile game character art"]
+  rendering_en: ["polished character design", "semi-realistic anime", "refined facial features", "detailed costume design"]
+cinematography:
+  lighting_en: ["soft cinematic lighting", "glowing rim light"]
+  camera_en: ["medium close-up"]
+  environment_en: ["sparkling magical effects, elegant visual effects"]
+  mood_en: ["character-focused composition"]
+prompt_template: |
+  {{subject}},
+  modern anime, anime mobile game character art,
+  polished character design, semi-realistic anime,
+  refined facial features, detailed costume design,
+  soft cinematic lighting, glowing rim light, medium close-up,
+  sparkling magical effects, elegant visual effects,
+  vibrant color palette, character-focused composition
+negative_prompt: ["busy background overpowering the character", "rough sketch texture", "muted colors", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "9:16"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]
+notes_zh: semi-realistic anime 不宜过重。

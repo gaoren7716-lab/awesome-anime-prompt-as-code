@@ -1,0 +1,26 @@
+id: watercolor-anime-v1
+title: 水彩动漫
+version: v1.0
+category: [hand-drawn]
+tags: [水彩, 柔和, 纸纹]
+description: 颜料/边缘/纸张三层缺一不可；没有 paper texture 会像数码低饱和滤镜。
+input_variables:
+  subject: { default: "a girl standing in a flower field", description: "画面主体" }
+style:
+  base_system_en: ["watercolor anime"]
+  rendering_en: ["soft watercolor washes", "paper texture", "delicate brushwork", "subtle color bleeding"]
+cinematography:
+  lighting_en: ["soft diffused lighting"]
+  camera_en: ["medium shot"]
+  environment_en: ["flower field, soft background"]
+  mood_en: ["dreamy mood"]
+prompt_template: |
+  {{subject}},
+  watercolor anime, soft watercolor washes, paper texture,
+  delicate brushwork, subtle color bleeding,
+  soft diffused lighting, medium shot,
+  flower field, soft background, pastel colors, dreamy mood
+negative_prompt: ["hard shadows", "thick outlines", "high saturation", "digital gradient look", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]

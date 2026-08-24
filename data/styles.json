@@ -1,0 +1,64 @@
+{
+  "$comment": "L1 基础体系 + L2 流派/时代 + L3 渲染质感 的风格条目库。core_en 为该风格的核心提示词锚点；avoid 为禁止同框的冲突词。来源：动漫AI绘图Prompt项目档案。",
+  "groups": {
+    "basic-textures": "基础动漫质感（10 种，通用起点）",
+    "japanese-classic": "日系经典（5 种）",
+    "chinese-donghua": "东方国漫（6 种）",
+    "hand-drawn": "手绘动画系（5 种）",
+    "western": "欧美动漫（4 种）",
+    "special": "特殊题材（4 种）",
+    "aesthetic": "唯美系（3 种）",
+    "cinematic": "电影级叙事（5 种）"
+  },
+  "styles": [
+    { "id": "standard-japanese", "name_zh": "标准日漫", "group": "basic-textures", "core_en": ["Japanese anime", "anime illustration", "clean lineart"], "notes_zh": "默认通用起点。" },
+    { "id": "modern-japanese", "name_zh": "现代日漫", "group": "basic-textures", "core_en": ["modern anime", "semi-realistic anime", "polished rendering"], "notes_zh": "新番感、商业角色图。" },
+    { "id": "high-detail-japanese", "name_zh": "高精度日漫", "group": "basic-textures", "core_en": ["highly detailed anime", "intricate linework"], "notes_zh": "海报、壁纸、复杂场景。" },
+    { "id": "cel-shading", "name_zh": "赛璐璐", "group": "basic-textures", "core_en": ["cel shading", "flat colors", "hard shadows"], "notes_zh": "传统动画、干净分色。", "avoid": ["soft shading", "subtle gradients", "rich brush strokes"] },
+    { "id": "soft-shading", "name_zh": "半厚涂", "group": "basic-textures", "core_en": ["clean lineart", "soft shading", "subtle gradients"], "notes_zh": "商业角色、封面。与厚涂初期不要重度混用。" },
+    { "id": "impasto-anime", "name_zh": "厚涂动漫", "group": "basic-textures", "core_en": ["painterly anime", "rich brush strokes", "textured rendering"], "notes_zh": "原画、概念图。避免与强 clean lineart 同时拉满。" },
+    { "id": "illustration-anime", "name_zh": "插画动漫", "group": "basic-textures", "core_en": ["artistic composition", "decorative elements"], "notes_zh": "封面、海报、社媒配图。" },
+    { "id": "anime-screencap", "name_zh": "动画截图", "group": "basic-textures", "core_en": ["anime screencap", "natural character acting"], "notes_zh": "分镜、短剧首帧。" },
+    { "id": "anime-film", "name_zh": "动漫电影", "group": "basic-textures", "core_en": ["anime film", "atmospheric perspective"], "notes_zh": "开篇、世界观、大场景。" },
+    { "id": "game-art", "name_zh": "二次元游戏", "group": "basic-textures", "core_en": ["anime game art", "polished character design"], "notes_zh": "角色卡、手游立绘。" },
+
+    { "id": "retro-1980s", "name_zh": "80年代复古动画", "group": "japanese-classic", "core_en": ["1980s anime", "vintage Japanese animation", "retro cel animation", "rough hand-drawn lineart", "muted colors", "analog texture"], "notes_zh": "核心：rough hand-drawn lineart + muted colors + analog texture。" },
+    { "id": "early-2000s", "name_zh": "2000年代日漫", "group": "japanese-classic", "core_en": ["early 2000s anime", "digital cel shading", "clean anime lineart", "vibrant colors", "expressive large eyes"], "notes_zh": "核心：digital cel shading + clean anime lineart。" },
+    { "id": "shoujo", "name_zh": "少女漫", "group": "japanese-classic", "core_en": ["shoujo manga style", "delicate lineart", "slender proportions", "sparkling eyes", "floral motifs"], "notes_zh": "纤细比例 + 大眼高光 + 柔光 + 情绪特写；柔光优先 pastel。" },
+    { "id": "seinen", "name_zh": "青年漫", "group": "japanese-classic", "core_en": ["seinen manga style", "mature character design", "realistic proportions", "detailed lineart", "subtle facial expressions", "textured shading"], "notes_zh": "写实比例 + 克制表情 + 硬光阴影 + 现实环境。适合犯罪悬疑、都市现实。" },
+    { "id": "shonen", "name_zh": "热血少年漫", "group": "japanese-classic", "core_en": ["shonen anime style", "dynamic composition", "bold lineart", "vibrant colors", "speed lines"], "notes_zh": "bold lineart + speed lines + dynamic composition。" },
+
+    { "id": "xianxia", "name_zh": "仙侠", "group": "chinese-donghua", "core_en": ["Chinese donghua", "xianxia aesthetic", "Chinese cultivation fantasy", "semi-realistic painterly rendering", "volumetric light", "soft mystical glow"], "notes_zh": "拍人靠近天空：wide cinematic shot + misty mountains + ancient architecture。" },
+    { "id": "wuxia-ink", "name_zh": "水墨武侠", "group": "chinese-donghua", "core_en": ["Chinese ink wash animation", "wuxia aesthetic", "expressive brush strokes", "negative space", "subtle paper texture"], "notes_zh": "拍人走进江湖；留白写意，少即是多。镜头用 extreme wide shot。" },
+    { "id": "modern-donghua", "name_zh": "现代国漫", "group": "chinese-donghua", "core_en": ["modern Chinese donghua", "elegant lineart", "urban aesthetic", "cinematic lighting", "soft rim light"], "notes_zh": "elegant lineart + urban aesthetic + cinematic lighting。" },
+    { "id": "eastern-fantasy", "name_zh": "东方幻想", "group": "chinese-donghua", "core_en": ["Chinese fantasy animation", "eastern fantasy aesthetic", "painterly rendering", "ornate costume design", "mystical architecture", "mythical creature"], "notes_zh": "区别于仙侠：不强调 cultivation/flying sword，重点是神话志怪神兽与世界奇观。" },
+    { "id": "ink-wash", "name_zh": "水墨国漫", "group": "chinese-donghua", "core_en": ["Chinese ink wash animation", "ink painting style", "negative space", "flowing ink", "serene contemplative mood"], "notes_zh": "灵魂是 negative space。镜头 wide/extreme wide；人融入天地。" },
+    { "id": "gongbi", "name_zh": "工笔风", "group": "chinese-donghua", "core_en": ["Chinese gongbi painting", "fine brushwork", "precise linework", "delicate details", "mineral pigments", "ornate traditional Chinese costume"], "notes_zh": "细节即美。镜头 medium close-up/portrait；人物是视觉中心。与水墨不可混淆。" },
+
+    { "id": "pure-hand-drawn", "name_zh": "纯手绘动画", "group": "hand-drawn", "core_en": ["hand-drawn animation", "traditional 2D animation", "organic linework", "natural imperfections", "painted background"], "notes_zh": "核心：organic linework + natural imperfections。" },
+    { "id": "watercolor-anime", "name_zh": "水彩动漫", "group": "hand-drawn", "core_en": ["watercolor anime", "soft watercolor washes", "paper texture", "delicate brushwork", "subtle color bleeding"], "notes_zh": "没有 paper texture 会像数码低饱和滤镜。颜料、边缘、纸张三层缺一不可。" },
+    { "id": "storybook", "name_zh": "绘本动漫", "group": "hand-drawn", "core_en": ["storybook illustration", "simple organic shapes", "painted background", "whimsical fantasy environment"], "notes_zh": "绘本更适合 wide shot 与环境叙事。" },
+    { "id": "pencil-sketch", "name_zh": "铅笔素描动漫", "group": "hand-drawn", "core_en": ["pencil sketch anime", "graphite linework", "visible pencil strokes", "unfinished drawing feel", "minimal background"], "notes_zh": "留白服务情绪；close-up + minimal background。" },
+    { "id": "colored-pencil", "name_zh": "彩铅动漫", "group": "hand-drawn", "core_en": ["colored pencil illustration", "soft colored pencil strokes", "layered pencil shading", "cozy indoor setting"], "notes_zh": "适合温馨日常，不适合强冲突。" },
+
+    { "id": "american-cartoon", "name_zh": "美式动画", "group": "western", "core_en": ["western animation", "American cartoon style", "stylized character design", "bold shapes", "clean outlines", "vibrant flat colors"], "notes_zh": "靠夸张形体与轮廓辨识度。" },
+    { "id": "western-comic", "name_zh": "欧美漫画", "group": "western", "core_en": ["western comic book style", "graphic novel aesthetic", "bold ink lines", "thick outlines", "high contrast rendering", "halftone texture"], "notes_zh": "bold ink lines + high contrast rendering。" },
+    { "id": "western-fantasy", "name_zh": "欧美奇幻", "group": "western", "core_en": ["western fantasy animation", "painterly animation", "stylized realistic character design", "rich brush strokes", "atmospheric perspective"], "notes_zh": "强调城堡、盔甲、石材、皮革、龙、遗迹等材质与环境规模。" },
+    { "id": "dark-fantasy-western", "name_zh": "黑暗奇幻", "group": "western", "core_en": ["dark fantasy animation", "gothic atmosphere", "detailed textured rendering", "ornate dark armor", "low-key lighting", "cold moonlight", "candlelight glow"], "notes_zh": "用 low-key + cold moonlight + candlelight glow，避免一团死黑。" },
+
+    { "id": "cyberpunk-anime", "name_zh": "赛博朋克", "group": "special", "core_en": ["cyberpunk anime", "neon-lit city", "semi-realistic anime", "neon lighting", "rain-soaked streets", "low angle shot", "dutch angle", "high-tech low-life mood"], "camera_en": ["low angle shot", "dutch angle"], "notes_zh": "核心组合 neon lighting + rain-soaked streets。" },
+    { "id": "mecha", "name_zh": "机甲", "group": "special", "core_en": ["mecha anime", "giant robot", "mechanical details", "industrial hangar", "hard lighting", "dynamic action shot"], "notes_zh": "mechanical details + industrial hangar，避免普通机器人玩具感。" },
+    { "id": "horror-anime", "name_zh": "恐怖", "group": "special", "core_en": ["horror anime", "desaturated colors", "eerie lighting", "extreme close-up", "dutch angle", "psychological horror"], "notes_zh": "心理恐怖优先；desaturated + eerie + dutch angle 比堆 blood/gore 更稳。" },
+    { "id": "post-apocalyptic", "name_zh": "末日", "group": "special", "core_en": ["post-apocalyptic anime", "ruined city", "desolate atmosphere", "survival tension", "wide shot"], "notes_zh": "依赖渺小人物与巨大废墟的空间对比；少用 close-up。" },
+
+    { "id": "dreamy", "name_zh": "梦幻动漫", "group": "aesthetic", "core_en": ["dreamy anime", "ethereal glow", "glowing particles", "floating light effects", "subtle mist", "soft bokeh"], "notes_zh": "梦幻拍情绪。" },
+    { "id": "girl-system", "name_zh": "少女系", "group": "aesthetic", "core_en": ["cute anime girl", "shoujo manga style", "sparkling eyes", "soft blush", "soft pastel palette", "flower petals"], "notes_zh": "少女系拍人物。" },
+    { "id": "beautiful-fantasy", "name_zh": "唯美幻想", "group": "aesthetic", "core_en": ["beautiful fantasy anime", "painterly rendering", "magical glow", "atmospheric perspective", "wide cinematic shot", "enchanting magical atmosphere"], "notes_zh": "唯美幻想拍世界。" },
+
+    { "id": "cinematic-general", "name_zh": "通用电影感", "group": "cinematic", "core_en": ["cinematic anime", "cinematic composition", "volumetric lighting", "foreground depth", "cinematic color grading", "teal and orange color palette"], "notes_zh": "teal and orange 不适用于水彩/绘本/少女漫/工笔。" },
+    { "id": "film-still", "name_zh": "动漫电影截图", "group": "cinematic", "core_en": ["animated film still", "natural character acting", "candid moment", "subtle film grain", "muted cinematic tone"], "notes_zh": "关键是 natural character acting；可加 looking away from camera 等动作。" },
+    { "id": "establishing-shot", "name_zh": "建立镜头/大场景", "group": "cinematic", "core_en": ["cinematic establishing shot", "epic scale", "massive detailed environment", "small lone figure"], "notes_zh": "不只是远景，而是用环境交代故事世界。" },
+    { "id": "emotional-closeup", "name_zh": "情绪电影特写", "group": "cinematic", "core_en": ["restrained emotion", "shallow depth of field", "minimal blurred background", "medium close-up"], "notes_zh": "restrained emotion + shallow depth of field。" },
+    { "id": "crime-suspense", "name_zh": "犯罪悬疑", "group": "cinematic", "core_en": ["seinen manga style", "animated film still", "blue hour", "cold rim light", "wet pavement reflections", "psychological suspense"], "notes_zh": "见 examples/detective-rainy-alley.yaml 完整案例。" }
+  ]
+}

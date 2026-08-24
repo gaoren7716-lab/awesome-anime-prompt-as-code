@@ -1,0 +1,27 @@
+id: western-fantasy-v1
+title: 欧美奇幻
+version: v1.0
+category: [western]
+tags: [西幻, 史诗, 绘本感]
+description: 强调城堡、盔甲、石材、皮革、龙与遗迹的材质规模感。
+input_variables:
+  subject: { default: "a young adventurer facing an ancient dragon", description: "画面主体" }
+style:
+  base_system_en: ["western fantasy animation"]
+  rendering_en: ["painterly animation", "stylized realistic character design", "rich brush strokes", "detailed texture"]
+cinematography:
+  lighting_en: ["natural atmospheric lighting"]
+  camera_en: ["wide cinematic shot"]
+  environment_en: ["epic fantasy environment", "ancient castle, dragon, misty forest"]
+  mood_en: ["epic adventurous atmosphere"]
+prompt_template: |
+  {{subject}},
+  western fantasy animation, painterly animation,
+  stylized realistic character design, rich brush strokes, detailed texture,
+  natural atmospheric lighting, wide cinematic shot,
+  epic fantasy environment, ancient castle, dragon, misty forest,
+  epic adventurous atmosphere
+negative_prompt: ["anime school uniform", "neon colors", "chibi proportions", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "21:9"
+platforms: ["gpt-image-2", "midjourney", "flux", "sdxl"]

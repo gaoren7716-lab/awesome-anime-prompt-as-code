@@ -1,0 +1,29 @@
+id: golden-hour-rooftop-v1
+title: 黄昏天台
+version: v1.0
+category: [cinematic]
+tags: [黄昏, 青春, 告别]
+description: golden hour + 天台 + 风；遗憾增强版见 notes。
+input_variables:
+  subject: { default: "a girl with wind-blown hair", description: "画面主体" }
+style:
+  base_system_en: ["Japanese anime", "modern anime"]
+  rendering_en: ["semi-realistic anime", "soft shading"]
+cinematography:
+  lighting_en: ["golden hour", "warm sunset light", "long shadows", "warm orange sky"]
+  camera_en: ["medium shot"]
+  environment_en: ["Japanese high school rooftop", "gentle wind"]
+  mood_en: ["nostalgic youthful atmosphere", "cinematic color grading"]
+prompt_template: |
+  {{subject}},
+  Japanese anime, modern anime,
+  semi-realistic anime, soft shading,
+  golden hour, warm sunset light, long shadows, warm orange sky,
+  medium shot, Japanese high school rooftop,
+  gentle wind, wind-blown hair,
+  nostalgic youthful atmosphere, cinematic color grading
+negative_prompt: ["harsh midday sun", "cold blue tones", "empty expressionless face", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]
+notes_zh: 遗憾增强：追加 empty rooftop, faded colors, bittersweet mood。

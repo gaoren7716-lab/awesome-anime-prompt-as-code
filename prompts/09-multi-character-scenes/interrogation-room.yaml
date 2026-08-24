@@ -1,0 +1,33 @@
+id: interrogation-room-v1
+title: 审讯室双人对峙
+version: v1.0
+category: [multi-character]
+tags: [多角色, 对峙, 情绪对立]
+description: 侦探×嫌疑人：身份对立+视线对立；OTS 镜头天然分配主次。
+input_variables:
+  detective: { default: "a calm detective with slicked-back hair and round glasses" }
+  suspect: { default: "a restless young man with messy dyed hair and a hoodie" }
+style:
+  base_system_en: ["seinen manga style", "animated film still"]
+  rendering_en: ["semi-realistic anime", "mature character design"]
+cinematography:
+  lighting_en: ["single overhead lamp", "hard shadows on faces", "dim ambient light"]
+  camera_en: ["over-the-shoulder shot from behind the detective", "suspect in sharp focus"]
+  environment_en: ["dim interrogation room", "metal table between them", "bare concrete walls"]
+  mood_en: ["quiet tension", "psychological suspense"]
+prompt_template: |
+  Two characters in one frame: {{detective}} seated with his back to camera on the left,
+  {{suspect}} facing the camera on the right.
+  The two characters must have clearly different hair, clothing silhouettes and body language.
+  seinen manga style, animated film still,
+  semi-realistic anime, mature character design,
+  single overhead lamp, hard shadows on faces, dim ambient light,
+  over-the-shoulder shot from behind the detective, suspect in sharp focus,
+  dim interrogation room, metal table between them, bare concrete walls,
+  quiet tension, psychological suspense
+negative_prompt: ["identical faces", "same hairstyle", "both facing camera symmetrically", "bright colors", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+  character_priority: high
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]
+notes_zh: 不撞脸三板斧：发型对比+服装轮廓对比+姿态对比；写明左右站位与谁背对镜头。

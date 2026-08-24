@@ -1,0 +1,26 @@
+id: pencil-sketch-v1
+title: 铅笔素描动漫
+version: v1.0
+category: [hand-drawn]
+tags: [素描, 情绪留白]
+description: visible pencil strokes + minimal background，留白服务情绪。
+input_variables:
+  subject: { default: "a girl looking down with teary eyes", description: "画面主体" }
+style:
+  base_system_en: ["pencil sketch anime"]
+  rendering_en: ["graphite linework", "rough sketch texture", "visible pencil strokes", "subtle shading", "unfinished drawing feel"]
+cinematography:
+  lighting_en: ["soft natural lighting"]
+  camera_en: ["close-up shot"]
+  environment_en: ["minimal background"]
+  mood_en: ["raw emotional atmosphere"]
+prompt_template: |
+  {{subject}},
+  pencil sketch anime, graphite linework, rough sketch texture,
+  visible pencil strokes, subtle shading, unfinished drawing feel,
+  soft natural lighting, close-up shot, minimal background,
+  raw emotional atmosphere
+negative_prompt: ["full color", "detailed background", "polished finish", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "1:1"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "jimeng-kling"]

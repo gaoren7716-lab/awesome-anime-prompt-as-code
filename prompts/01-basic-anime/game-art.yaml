@@ -1,0 +1,26 @@
+id: game-art-v1
+title: 二次元游戏美术
+version: v1.0
+category: [basic]
+tags: [手游立绘, 角色卡, 商业游戏]
+description: 手游级抛光角色设计的通用基底（进阶玩法见 05-game-character）。
+input_variables:
+  subject: { default: "a gun-wielding agent in a black suit", description: "画面主体" }
+  environment: { default: "abstract geometric backdrop with light streaks", description: "背景（角色优先时用抽象背景）" }
+style:
+  base_system_en: [modern anime]
+  rendering_en: [anime game art, polished character design, detailed costume design]
+cinematography:
+  lighting_en: [glowing rim light, soft cinematic lighting]
+  camera_en: [three-quarter view]
+  environment_en: ["{{environment}}"]
+  mood_en: [sleek high-production atmosphere]
+prompt_template: |
+  {{subject}},
+  anime game art, polished character design, detailed costume design,
+  glowing rim light, three-quarter view,
+  {{environment}}, sleek high-production atmosphere
+negative_prompt: [rough sketch, flat unshaded, amateur proportions, text, watermark, extra fingers]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

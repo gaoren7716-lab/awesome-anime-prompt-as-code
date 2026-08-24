@@ -1,0 +1,28 @@
+id: emotional-closeup-v1
+title: 情绪电影特写
+version: v1.0
+category: [cinematic]
+tags: [特写, 克制情绪]
+description: restrained emotion + shallow depth of field；泪要含着，不要嚎啕。
+input_variables:
+  subject: { default: "a young man suppressing tears", description: "画面主体" }
+style:
+  base_system_en: ["emotional anime", "cinematic anime"]
+  rendering_en: ["semi-realistic anime", "soft rendering", "subtle facial expression"]
+cinematography:
+  lighting_en: ["soft atmospheric lighting", "diffused light"]
+  camera_en: ["medium close-up", "shallow depth of field"]
+  environment_en: ["minimal blurred background"]
+  mood_en: ["melancholic contemplative atmosphere"]
+prompt_template: |
+  {{subject}},
+  emotional anime, cinematic anime,
+  semi-realistic anime, soft rendering,
+  subtle facial expression, restrained emotion,
+  soft atmospheric lighting, diffused light,
+  medium close-up, shallow depth of field,
+  minimal blurred background, melancholic contemplative atmosphere
+negative_prompt: ["exaggerated crying face", "wide smile", "busy background", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]

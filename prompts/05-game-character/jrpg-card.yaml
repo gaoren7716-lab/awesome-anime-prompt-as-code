@@ -1,0 +1,28 @@
+id: jrpg-card-v1
+title: JRPG 角色卡
+version: v1.0
+category: [game]
+tags: [JRPG, 角色卡, 奇幻]
+description: 全身+四分之三视角+标志性武器；奇幻世界观角色卡标准格式。
+input_variables:
+  subject: { default: "a knight commander with a greatsword", description: "画面主体" }
+style:
+  base_system_en: ["Japanese anime", "JRPG character art", "fantasy game aesthetic"]
+  rendering_en: ["painterly anime", "rich brush strokes", "textured rendering"]
+cinematography:
+  lighting_en: ["dramatic lighting", "strong rim light"]
+  camera_en: ["full body character", "three-quarter view"]
+  environment_en: ["ornate fantasy costume, signature weapon", "fantasy environment"]
+  mood_en: ["heroic epic atmosphere"]
+prompt_template: |
+  {{subject}},
+  Japanese anime, JRPG character art, fantasy game aesthetic,
+  painterly anime, rich brush strokes, textured rendering,
+  dramatic lighting, strong rim light,
+  full body character, three-quarter view,
+  ornate fantasy costume, signature weapon,
+  fantasy environment, heroic epic atmosphere
+negative_prompt: ["cropped limbs", "flat lighting", "modern clothing", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]

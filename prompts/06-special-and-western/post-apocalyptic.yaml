@@ -1,0 +1,28 @@
+id: post-apocalyptic-v1
+title: 末日废土
+version: v1.0
+category: [special]
+tags: [末日, 废土, 灾难]
+description: 渺小人物 × 巨大废墟的空间对比；少用 close-up。
+input_variables:
+  subject: { default: "a small lone figure with a gas mask", description: "画面主体（宜小）" }
+style:
+  base_system_en: ["post-apocalyptic anime", "dark anime"]
+  rendering_en: ["semi-realistic anime", "textured rendering"]
+cinematography:
+  lighting_en: ["dramatic sky", "natural lighting"]
+  camera_en: ["wide shot", "extreme wide shot"]
+  environment_en: ["ruined city", "abandoned buildings"]
+  mood_en: ["desolate atmosphere", "survival tension"]
+prompt_template: |
+  {{subject}} dwarfed by massive ruins,
+  post-apocalyptic anime, dark anime,
+  semi-realistic anime, textured rendering,
+  dramatic sky, natural lighting,
+  wide shot, extreme wide shot,
+  ruined city, abandoned buildings,
+  desolate atmosphere, survival tension
+negative_prompt: ["close-up portrait", "vibrant cheerful colors", "intact modern city", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "21:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]

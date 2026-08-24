@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>awesome-anime-prompt-as-code · 动漫提示词结构化模板库</title>
+<style>
+  :root { --bg:#0d0f1a; --card:#161a2c; --line:#2a2f4a; --txt:#e8eaf6; --sub:#9aa3c7; --acc:#7c6cff; --acc2:#ff6c9d; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--txt); font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.7; }
+  .hero { text-align:center; padding:90px 20px 60px; background:linear-gradient(160deg,#0d0f1a 40%,#1a1440 75%,#2a1040); }
+  .hero h1 { font-size:2.4rem; letter-spacing:.5px; }
+  .hero h1 span { background:linear-gradient(90deg,var(--acc),var(--acc2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p { color:var(--sub); max-width:720px; margin:18px auto 30px; font-size:1.05rem; }
+  .badges { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+  .badge { border:1px solid var(--line); background:var(--card); padding:5px 14px; border-radius:999px; font-size:.85rem; color:var(--sub); }
+  .badge b { color:var(--acc2); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; max-width:1080px; margin:0 auto; padding:50px 20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; transition:.25s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--acc); }
+  .card h3 { margin-bottom:8px; font-size:1.05rem; }
+  .card p { color:var(--sub); font-size:.92rem; }
+  .formula { max-width:900px; margin:10px auto; padding:26px 22px; background:var(--card); border:1px dashed var(--acc); border-radius:14px; text-align:center; font-family:Consolas,monospace; font-size:.98rem; color:var(--txt); }
+  .cta { text-align:center; padding:30px 20px 80px; }
+  .btn { display:inline-block; margin:8px; padding:13px 30px; border-radius:10px; text-decoration:none; font-weight:600; }
+  .btn-main { background:linear-gradient(90deg,var(--acc),var(--acc2)); color:#fff; }
+  .btn-ghost { border:1px solid var(--line); color:var(--txt); }
+  footer { text-align:center; color:var(--sub); font-size:.85rem; padding:26px; border-top:1px solid var(--line); }
+  code { background:#22273f; padding:2px 7px; border-radius:5px; font-size:.88em; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>awesome-<span>anime-prompt-as-code</span></h1>
+  <p>面向 GPT-Image-2 及通用图像模型的动漫提示词结构化模板库。<br>
+  把角色、画风、材质、光影、镜头、环境和叙事，拆成可复用、可校验、可跨平台调用的 Prompt 协议。</p>
+  <div class="badges">
+    <span class="badge"><b>49</b> YAML 模板</span>
+    <span class="badge"><b>40+</b> 风格锚点</span>
+    <span class="badge"><b>9</b> 分层词库</span>
+    <span class="badge"><b>2</b> JSON Schema</span>
+    <span class="badge">MIT License</span>
+  </div>
+</section>
+
+<div class="formula">
+主体 + L1 基础体系 + L2 流派/时代 + L3 渲染质感<br>
++ L4 光影 + L5 镜头 + L6 环境 + L7 情绪
+</div>
+
+<section class="grid">
+  <div class="card"><h3>🎨 动漫视觉语言库</h3><p>日漫经典、国漫（仙侠/水墨/工笔）、手绘水彩、游戏立绘、赛博机甲恐怖末日、欧美动画——每风格一个 YAML 模板。</p></div>
+  <div class="card"><h3>🎬 镜头与叙事库</h3><p>角色首帧、小说封面、短剧分镜、双人对峙、情绪特写、建立镜头。光影/镜头/环境/情绪四维词库独立检索。</p></div>
+  <div class="card"><h3>👥 多角色同框控制</h3><p>不撞脸三板斧：发型对比 × 轮廓对比 × 站位声明。审讯室对峙、雨夜对决、主角团出场三大模板。</p></div>
+  <div class="card"><h3>🔁 角色一致性协议</h3><p>Character Bible 冻结外貌/服装/标志道具锚点，先定妆后量产，跨场景不漂移。</p></div>
+  <div class="card"><h3>🔌 模型适配层</h3><p>同一份 YAML 自动适配 GPT-Image-2（无负向字段→指令改写）、Midjourney niji 6、Flux、SDXL、即梦、可灵。</p></div>
+  <div class="card"><h3>🤖 Agent Skill</h3><p><code>npx skills add gaoren7716-lab/awesome-anime-prompt-as-code --skill anime-prompt-library</code> 装入 Claude Code / Cursor 直接对话生成。</p></div>
+</section>
+
+<section class="cta">
+  <a class="btn btn-main" href="https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code">GitHub 仓库</a>
+  <a class="btn btn-ghost" href="https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/docs/prompt-formula.md">7 层公式教学</a>
+  <a class="btn btn-ghost" href="https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/README.zh-CN.md">中文文档</a>
+</section>
+
+<footer>Copyright © 2026 gaoren7716-lab and contributors · MIT License</footer>
+
+</body>
+</html>

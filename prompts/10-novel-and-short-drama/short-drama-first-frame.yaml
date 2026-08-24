@@ -1,0 +1,31 @@
+id: short-drama-first-frame-v1
+title: AI 短剧首帧
+version: v1.0
+category: [narrative]
+tags: [短剧, 首帧, 分镜]
+description: 16:9 电影感首帧：一眼看懂人物关系与冲突；为下一镜留运动空间。
+input_variables:
+  character_a: { default: "a bride in a torn wedding dress, mascara smeared" }
+  conflict_hint: { default: "holding a burnt photograph" }
+  place: { default: "a luxury hotel corridor at night" }
+style:
+  base_system_en: ["cinematic anime", "animated film still"]
+  rendering_en: ["semi-realistic anime", "natural character acting"]
+cinematography:
+  lighting_en: ["cold practical light", "dramatic shadows"]
+  camera_en: ["medium shot", "rule-of-thirds composition", "leading space on one side"]
+  environment_en: ["{{place}}"]
+  mood_en: ["tense atmosphere", "muted cinematic tone"]
+prompt_template: |
+  First frame of a drama scene: {{character_a}},
+  {{conflict_hint}}, standing in {{place}},
+  cinematic anime, animated film still,
+  semi-realistic anime, natural character acting,
+  cold practical light, dramatic shadows,
+  medium shot, rule-of-thirds composition, leading space on one side,
+  tense atmosphere, muted cinematic tone
+negative_prompt: ["symmetrical centered composition", "looking at camera", "cheerful mood", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "jimeng-kling"]
+notes_zh: 首帧三要素：情绪可读（表情+道具）+ 关系暗示 + 留出运动方向空间。

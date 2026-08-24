@@ -1,0 +1,28 @@
+id: retro-1980s-v1
+title: 80年代复古动画
+version: v1.0
+category: [japanese]
+tags: [复古, 旧番, 胶片感]
+description: 昭和旧番质感：粗手绘线 + 灰调色 + 模拟介质颗粒。
+input_variables:
+  subject: { default: "a pilot in a vintage flight jacket", description: "画面主体" }
+  environment: { default: "a retro city street at dusk", description: "场景" }
+style:
+  base_system_en: [1980s anime, vintage Japanese animation]
+  rendering_en: [retro cel animation, rough hand-drawn lineart]
+  palette_en: [muted colors, analog texture]
+cinematography:
+  lighting_en: [soft natural lighting]
+  camera_en: [medium shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [nostalgic mood]
+prompt_template: |
+  {{subject}},
+  1980s anime, vintage Japanese animation, retro cel animation,
+  rough hand-drawn lineart, muted colors, analog texture,
+  medium shot, {{environment}}, film grain, nostalgic mood
+negative_prompt: [modern polished rendering, digital gradients, neon colors, clean digital lineart, text, watermark]
+suggested_settings:
+  aspect_ratio: "4:3"
+platforms: [midjourney-niji, flux, sdxl]
+notes_zh: 核心锚点 rough hand-drawn lineart + muted colors + analog texture。

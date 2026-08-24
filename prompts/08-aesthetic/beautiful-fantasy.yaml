@@ -1,0 +1,29 @@
+id: beautiful-fantasy-v1
+title: 唯美幻想
+version: v1.0
+category: [aesthetic]
+tags: [唯美幻想, 世界奇观]
+description: 唯美幻想拍世界：wide cinematic + atmospheric perspective + magical glow。
+input_variables:
+  subject: { default: "a tiny explorer on a floating island bridge", description: "画面主体（宜小）" }
+style:
+  base_system_en: ["beautiful fantasy anime"]
+  rendering_en: ["painterly rendering", "textured detailed rendering", "delicate ornate details"]
+cinematography:
+  lighting_en: ["ethereal lighting", "magical glow"]
+  camera_en: ["wide cinematic shot", "atmospheric perspective"]
+  environment_en: ["fantasy magical environment", "ancient floating ruins", "luminous forest"]
+  mood_en: ["enchanting magical atmosphere"]
+prompt_template: |
+  {{subject}},
+  beautiful fantasy anime, painterly rendering,
+  textured detailed rendering,
+  ethereal lighting, magical glow,
+  wide cinematic shot, atmospheric perspective,
+  fantasy magical environment,
+  ancient floating ruins, luminous forest,
+  delicate ornate details, enchanting magical atmosphere
+negative_prompt: ["empty flat background", "close-up crop", "dull muted colors", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "21:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]

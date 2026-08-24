@@ -1,0 +1,26 @@
+id: modern-japanese-v1
+title: 现代日漫
+version: v1.0
+category: [basic]
+tags: [新番感, 商业角色图]
+description: 新番质感、商业级角色立绘的通用基底。
+input_variables:
+  subject: { default: "a young swordswoman with silver hair", description: "画面主体" }
+  environment: { default: "a modern city street at dusk", description: "场景" }
+style:
+  base_system_en: [modern anime]
+  rendering_en: [semi-realistic anime, polished rendering]
+cinematography:
+  lighting_en: [cinematic lighting]
+  camera_en: [medium close-up]
+  environment_en: ["{{environment}}"]
+  mood_en: [refined contemporary atmosphere]
+prompt_template: |
+  {{subject}},
+  modern anime, semi-realistic anime, polished rendering,
+  cinematic lighting, medium close-up,
+  {{environment}}, refined contemporary atmosphere
+negative_prompt: [retro film grain, rough lineart, flat colors, text, watermark, extra fingers, blurry]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

@@ -1,0 +1,28 @@
+id: western-comic-v1
+title: 欧美漫画
+version: v1.0
+category: [western]
+tags: [美漫, 硬朗, 半调网点]
+description: bold ink lines + high contrast rendering；严禁混日系大眼/粉彩。
+input_variables:
+  subject: { default: "a vigilante leaping between rooftops", description: "画面主体" }
+style:
+  base_system_en: ["western comic book style", "graphic novel aesthetic"]
+  rendering_en: ["bold ink lines", "thick outlines", "high contrast rendering", "halftone texture"]
+cinematography:
+  lighting_en: ["dramatic shadows", "hard lighting"]
+  camera_en: ["dynamic action shot", "dutch angle"]
+  environment_en: ["urban rooftop skyline"]
+  mood_en: ["intense dramatic atmosphere"]
+prompt_template: |
+  {{subject}},
+  western comic book style, graphic novel aesthetic,
+  bold ink lines, thick outlines,
+  high contrast rendering, dramatic shadows, hard lighting, halftone texture,
+  dynamic action shot, dutch angle,
+  intense dramatic atmosphere
+negative_prompt: ["large sparkling eyes", "soft pastel colors", "clean anime lineart", "moe style", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: ["gpt-image-2", "midjourney", "flux", "sdxl"]
+notes_zh: 跨体系避坑：勿混 large sparkling eyes / soft pastel / clean anime lineart。

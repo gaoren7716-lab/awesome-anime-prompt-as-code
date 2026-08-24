@@ -1,0 +1,27 @@
+id: seinen-manga-v1
+title: 青年漫
+version: v1.0
+category: [japanese]
+tags: [青年漫, 写实, 成人向]
+description: 写实比例+克制表情+硬光阴影+现实环境；犯罪悬疑首选基底。
+input_variables:
+  subject: { default: "a weary detective in his forties", description: "画面主体" }
+  environment: { default: "an urban realistic background", description: "场景" }
+style:
+  base_system_en: [seinen manga style]
+  rendering_en: [detailed lineart, textured shading]
+cinematography:
+  lighting_en: [dramatic shadows, hard lighting]
+  camera_en: [medium shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [serious contemplative atmosphere]
+prompt_template: |
+  {{subject}},
+  seinen manga style, mature character design, realistic proportions,
+  detailed lineart, subtle facial expressions, textured shading,
+  dramatic shadows, hard lighting, medium shot,
+  {{environment}}, serious contemplative atmosphere
+negative_prompt: [chibi, large sparkling eyes, pastel colors, cute pose, text, watermark]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl]

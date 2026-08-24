@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gaoren7716-lab.github.io/awesome-anime-prompt-as-code/schemas/anime-prompt.schema.json",
+  "title": "Anime Prompt Template (7-Layer Formula)",
+  "description": "Canonical schema for every template and example in this repository. Layers map to: subject + L1 base system + L2 genre/era + L3 rendering/material + L4 lighting + L5 camera + L6 environment + L7 mood. Layer discipline is enforced: camera words belong in cinematography.camera, never in lighting.",
+  "type": "object",
+  "required": ["id", "title", "version", "category", "style", "prompt_template"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(-v[0-9]+)?$" },
+    "title": { "type": "string" },
+    "version": { "type": "string", "pattern": "^v[0-9]+(\\.[0-9]+)?$" },
+    "category": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "basic", "japanese", "chinese", "hand-drawn", "game",
+          "special", "cinematic", "multi-character", "narrative"
+        ]
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "description": { "type": "string" },
+
+    "input_variables": {
+      "type": "object",
+      "description": "Named slots usable as {{key}} inside prompt_template.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "default": { "type": ["string", "number"] },
+          "enum": { "type": "array", "items": { "type": "string" } },
+          "description": { "type": "string" }
+        }
+      }
+    },
+
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type_en": { "type": "string", "description": "e.g. mature detective" },
+        "identity_en": { "type": "string" },
+        "appearance_en": { "type": "array", "items": { "type": "string" } },
+        "outfit_en": { "type": "array", "items": { "type": "string" } },
+        "props_en": { "type": "array", "items": { "type": "string" } },
+        "expression_en": { "type": "string" },
+        "action_en": { "type": "string", "description": "e.g. looking away from camera, walking through the rain" }
+      }
+    },
+
+    "style": {
+      "type": "object",
+      "required": ["base_system_en"],
+      "additionalProperties": false,
+      "properties": {
+        "base_system_en": {
+          "type": "array",
+          "maxItems": 2,
+          "items": { "type": "string" },
+          "description": "L1. Max 2; mixing japanese + western systems is a known conflict."
+        },
+        "genre_era_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "L2. e.g. seinen manga style, 1990s anime, xianxia aesthetic."
+        },
+        "rendering_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "L3 material/rendering. Must not contain words from data/negative-prompts.json conflicts."
+        },
+        "palette_en": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "cinematography": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lighting_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "L4 only. Camera terms are FORBIDDEN here — schema validators should reject 'shot|angle|composition' strings in this field."
+        },
+        "camera_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "L5 only."
+        },
+        "environment_en": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "L6 only."
+        },
+        "mood_en": {
+          "type": "array",
+          "maxItems": 2,
+          "items": { "type": "string" },
+          "description": "L7. Hard rule from docs/prompt-formula.md: at most TWO mood words, placed last."
+        }
+      }
+    },
+
+    "composition_notes": {
+      "type": "string",
+      "description": "Chinese notes on layout, e.g. 人物居中偏右，左侧留出小巷纵深与雨幕。Not injected into prompts."
+    },
+
+    "prompt_template": {
+      "type": "string",
+      "description": "Assembled prompt with optional {{variables}}. Layer order must follow subject → style(L1..L3) → lighting → camera → environment → mood."
+    },
+    "fixed_prompt": {
+      "type": "string",
+      "description": "Optional fully-assembled variant with no variables, ready to copy-paste."
+    },
+
+    "negative_prompt": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Canonical negative list. Adapters translate it per platform (see docs/model-guides.md): SDXL keeps it as-is; Midjourney maps to --no; GPT-Image-2 rewrites into 'avoid ...' natural language instructions because it has NO negative-prompt field."
+    },
+
+    "suggested_settings": {
+      "type": "object",
+      "properties": {
+        "aspect_ratio": { "type": "string" },
+        "character_priority": { "enum": ["high", "medium", "low"] },
+        "background_priority": { "enum": ["high", "medium", "low"] },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "platforms": {
+      "type": "array",
+      "items": {
+        "enum": ["gpt-image-2", "midjourney-niji", "midjourney", "flux", "sdxl", "jimeng", "kling", "universal"]
+      },
+      "description": "Tested/target platforms. midjourney-niji is the DEFAULT for anime styles."
+    },
+
+    "conflicts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Word pairs that must not co-occur in this template, referencing docs/style-conflicts.md."
+    },
+    "credits": {
+      "type": "string",
+      "description": "Source/author attribution if community-contributed."
+    },
+    "license": { "const": "MIT" }
+  }
+}

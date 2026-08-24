@@ -1,0 +1,14 @@
+# 案例 08：黑暗心理悬疑（档案六案例之一）
+template_ref: prompts/06-special-and-western/horror-anime.yaml + 07-cinematic/emotional-closeup.yaml
+input_variables:
+  subject: "a man staring at his own reflection"
+gpt_image_2: |
+  A man staring at his own reflection in a cracked mirror inside a dim urban corridor.
+  Dark anime, seinen manga style, mature character design, detailed rendering.
+  Deep shadows, desaturated colors, low-key lighting, cold rim light,
+  medium close-up. Psychological tension, ominous atmosphere.
+  Do not include: gore, blood splatter, bright colors, text, watermark.
+midjourney_niji: |
+  a man staring at his reflection in a cracked mirror, dim urban corridor, dark anime,
+  seinen manga style, deep shadows, desaturated colors, low-key lighting, cold rim light,
+  medium close-up, psychological tension --niji 6 --ar 2:3 --no gore, blood, bright colors

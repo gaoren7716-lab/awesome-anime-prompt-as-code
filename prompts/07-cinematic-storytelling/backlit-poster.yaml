@@ -1,0 +1,29 @@
+id: backlit-poster-v1
+title: 逆光海报感
+version: v1.0
+category: [cinematic]
+tags: [逆光, 登场, 海报]
+description: 命运/登场/电影海报感；脸部过黑的补救词见 notes。
+input_variables:
+  subject: { default: "a protagonist standing against the setting sun", description: "画面主体" }
+style:
+  base_system_en: ["cinematic anime", "anime film"]
+  rendering_en: ["detailed character design", "soft detailed rendering"]
+cinematography:
+  lighting_en: ["strong rim light", "sun flare", "dramatic silhouette"]
+  camera_en: ["low angle shot"]
+  environment_en: ["sunset city skyline", "wind-blown clothing"]
+  mood_en: ["emotional epic atmosphere", "cinematic composition"]
+prompt_template: |
+  {{subject}},
+  cinematic anime, anime film,
+  detailed character design, soft detailed rendering,
+  backlit anime character, strong rim light, glowing hair,
+  sun flare, dramatic silhouette,
+  low angle shot, sunset city skyline,
+  wind-blown clothing, emotional epic atmosphere, cinematic composition
+negative_prompt: ["flat frontal lighting", "plain background", "static pose", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]
+notes_zh: 脸部过黑时补：soft fill light, visible facial features, subtle facial detail。

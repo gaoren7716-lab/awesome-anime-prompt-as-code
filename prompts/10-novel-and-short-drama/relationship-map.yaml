@@ -1,0 +1,30 @@
+id: relationship-map-v1
+title: 小说人物关系图
+version: v1.0
+category: [narrative]
+tags: [人物关系, 设定图, 全员立绘]
+description: 多人设定图：统一风格+每人锚点差异；适合小说人设卡与宣传图。
+input_variables:
+  cast: { default: "four characters standing in a row: a silver-haired swordsman, a red-haired gunner, a small robot companion, a hooded healer" }
+style:
+  base_system_en: ["modern anime", "anime game art"]
+  rendering_en: ["polished character design", "detailed costume design", "consistent style across all characters"]
+cinematography:
+  lighting_en: ["even soft studio lighting", "subtle rim light"]
+  camera_en: ["full body shot", "lineup composition"]
+  environment_en: ["clean gradient background"]
+  mood_en: ["character sheet presentation"]
+prompt_template: |
+  Character lineup sheet: {{cast}},
+  modern anime, anime game art,
+  polished character design, detailed costume design,
+  consistent style across all characters,
+  even soft studio lighting, subtle rim light,
+  full body shot, lineup composition,
+  clean gradient background, character sheet presentation
+negative_prompt: ["inconsistent art styles between characters", "overlapping figures", "busy background", "text labels", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+  character_priority: high
+platforms: ["gpt-image-2", "flux", "midjourney-niji"]
+notes_zh: 每个角色的固定锚点建议先用 character-bible.schema.json 固化，再拼入本模板。

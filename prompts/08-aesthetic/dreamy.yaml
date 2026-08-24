@@ -1,0 +1,30 @@
+id: dreamy-v1
+title: 梦幻动漫
+version: v1.0
+category: [aesthetic]
+tags: [梦幻, 非现实感]
+description: 梦幻拍情绪：光斑+粒子+薄雾营造"这一刻不真实"。
+input_variables:
+  subject: { default: "a girl reaching toward floating lights", description: "画面主体" }
+style:
+  base_system_en: ["dreamy anime"]
+  rendering_en: ["soft rendering", "delicate facial features"]
+cinematography:
+  lighting_en: ["soft diffused lighting", "ethereal glow", "glowing particles", "floating light effects"]
+  camera_en: ["medium shot"]
+  environment_en: ["subtle mist", "soft bokeh", "ethereal fantasy background"]
+  mood_en: ["pastel colors", "ethereal wondrous atmosphere"]
+prompt_template: |
+  {{subject}},
+  dreamy anime, semi-realistic anime,
+  soft rendering, delicate facial features,
+  soft diffused lighting, ethereal glow,
+  glowing particles, floating light effects,
+  subtle mist, soft bokeh, medium shot,
+  ethereal fantasy background, pastel colors,
+  ethereal wondrous atmosphere
+negative_prompt: ["harsh shadows", "realistic gritty texture", "dark palette", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "jimeng-kling"]
+notes_zh: 核心四件套 = soft diffused lighting + glowing particles + floating light effects + subtle mist。

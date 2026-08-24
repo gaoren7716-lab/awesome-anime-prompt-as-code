@@ -1,0 +1,29 @@
+id: gongbi-v1
+title: 工笔风
+version: v1.0
+category: [chinese]
+tags: [工笔, 精细, 典雅]
+description: 细节即美：fine brushwork + precise linework，人物是视觉中心（区别于水墨）。
+input_variables:
+  subject: { default: "a noblewoman in ornate Tang dynasty attire", description: "画面主体" }
+  environment: { default: "traditional Chinese garden", description: "场景" }
+style:
+  base_system_en: [Chinese gongbi painting]
+  rendering_en: [fine brushwork, delicate details, precise linework]
+  palette_en: [elegant color palette, mineral pigments]
+cinematography:
+  lighting_en: [soft natural lighting]
+  camera_en: [medium close-up]
+  environment_en: ["{{environment}}"]
+  mood_en: [refined elegant atmosphere]
+prompt_template: |
+  {{subject}},
+  Chinese gongbi painting, fine brushwork, delicate details, precise linework,
+  elegant color palette, mineral pigments,
+  ornate traditional Chinese costume, soft natural lighting, medium close-up,
+  {{environment}}, refined elegant atmosphere
+negative_prompt: ["rough expressive brush strokes, abstract washes, negative space composition, modern clothing", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: [gpt-image-2, flux, sdxl, jimeng-kling]
+notes_zh: 工笔=多/细节密集/人物为视觉中心；镜头用 medium close-up 或 portrait。

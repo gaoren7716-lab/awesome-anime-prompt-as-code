@@ -1,0 +1,29 @@
+id: cyberpunk-anime-v1
+title: 赛博朋克动漫
+version: v1.0
+category: [special]
+tags: [赛博朋克, 霓虹, 反乌托邦]
+description: low angle + dutch angle × neon + rain-soaked streets 的都市反乌托邦。
+input_variables:
+  subject: { default: "a hooded courier with a glowing prosthetic arm", description: "画面主体" }
+style:
+  base_system_en: ["cyberpunk anime"]
+  genre_era_en: ["futuristic urban aesthetic"]
+  rendering_en: ["semi-realistic anime", "detailed rendering"]
+cinematography:
+  lighting_en: ["neon lighting", "colorful lighting"]
+  camera_en: ["low angle shot", "dutch angle"]
+  environment_en: ["futuristic cityscape", "rain-soaked streets"]
+  mood_en: ["moody atmosphere", "high-tech low-life mood"]
+prompt_template: |
+  {{subject}},
+  cyberpunk anime, neon-lit city,
+  semi-realistic anime, detailed rendering,
+  neon lighting, colorful lighting,
+  low angle shot, dutch angle,
+  futuristic cityscape, rain-soaked streets,
+  moody atmosphere, high-tech low-life mood
+negative_prompt: ["rural landscape", "warm rustic tones", "bright daylight pastel palette", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]

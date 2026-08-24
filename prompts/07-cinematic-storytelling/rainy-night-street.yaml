@@ -1,0 +1,29 @@
+id: rainy-night-street-v1
+title: 雨夜街头
+version: v1.0
+category: [cinematic]
+tags: [雨夜, 悬疑, 情绪爆发]
+description: 最少三层 rain droplets + wet streets + neon reflections。
+input_variables:
+  subject: { default: "a man in a soaked coat clenching his fist", description: "画面主体" }
+style:
+  base_system_en: ["dark anime", "cinematic anime"]
+  rendering_en: ["semi-realistic anime", "detailed rendering"]
+cinematography:
+  lighting_en: ["neon lighting", "colored neon glow", "dramatic lighting"]
+  camera_en: ["low angle shot"]
+  environment_en: ["rainy night", "rain droplets", "wet streets", "wet pavement reflections", "rainy city street"]
+  mood_en: ["tense atmosphere", "psychological tension", "dark color palette"]
+prompt_template: |
+  {{subject}},
+  dark anime, cinematic anime,
+  semi-realistic anime, detailed rendering,
+  rainy night, rain droplets,
+  wet streets, wet pavement reflections,
+  neon lighting, colored neon glow, dramatic lighting,
+  low angle shot, rainy city street,
+  tense atmosphere, psychological tension, dark color palette
+negative_prompt: ["sunny day", "dry ground", "pastel colors", "cheerful mood", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl", "jimeng-kling"]

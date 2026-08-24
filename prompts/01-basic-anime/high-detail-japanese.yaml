@@ -1,0 +1,26 @@
+id: high-detail-japanese-v1
+title: 高精度日漫
+version: v1.0
+category: [basic]
+tags: [海报, 壁纸, 复杂场景]
+description: 海报/壁纸级精细度，适合复杂构图与大信息量场景。
+input_variables:
+  subject: { default: "a dragon shrine maiden surrounded by floating lanterns", description: "画面主体" }
+  environment: { default: "an ancient shrine courtyard at night", description: "场景" }
+style:
+  base_system_en: [Japanese anime]
+  rendering_en: [highly detailed anime, intricate linework, detailed rendering]
+cinematography:
+  lighting_en: [dramatic lighting, glowing lantern light]
+  camera_en: [wide shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [majestic presence]
+prompt_template: |
+  {{subject}},
+  Japanese anime, highly detailed anime, intricate linework, detailed rendering,
+  dramatic lighting, wide shot,
+  {{environment}}, majestic presence
+negative_prompt: [simple background, sketch, unfinished, text, watermark, extra fingers, blurry]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

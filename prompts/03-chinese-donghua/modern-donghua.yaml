@@ -1,0 +1,27 @@
+id: modern-donghua-v1
+title: 现代国漫
+version: v1.0
+category: [chinese]
+tags: [现代都市, 国创]
+description: elegant lineart + 都市审美 + 电影光，当代国创番剧质感。
+input_variables:
+  subject: { default: "a young professional woman with a smartphone", description: "画面主体" }
+  environment: { default: "modern Chinese city, urban aesthetic", description: "场景" }
+style:
+  base_system_en: [modern Chinese donghua, Chinese animation style]
+  rendering_en: [detailed character design, elegant lineart]
+cinematography:
+  lighting_en: [cinematic lighting, soft rim light]
+  camera_en: [medium shot]
+  environment_en: ["{{environment}}"]
+  mood_en: [sophisticated contemporary atmosphere]
+prompt_template: |
+  {{subject}},
+  modern Chinese donghua, Chinese animation style,
+  detailed character design, elegant lineart,
+  cinematic lighting, soft rim light, medium shot,
+  {{environment}}, sophisticated contemporary atmosphere
+negative_prompt: [Japanese school uniform cliché, retro grain, chibi proportions, text, watermark]
+suggested_settings:
+  aspect_ratio: "16:9"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]

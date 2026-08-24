@@ -1,0 +1,13 @@
+# 案例 07：治愈系日常（档案六案例之一）
+template_ref: prompts/04-hand-drawn-watercolor/watercolor-anime.yaml
+input_variables:
+  subject: "a girl watering plants by a sunny window"
+gpt_image_2: |
+  A girl watering plants by a sunny window in a cozy room.
+  Hand-drawn anime with soft watercolor texture, organic linework, gentle color palette.
+  Natural sunlight, warm ambient lighting, medium shot, lush greenery around the windowsill.
+  Peaceful healing atmosphere. Do not include: text, watermark, harsh shadows, digital gloss.
+midjourney_niji: |
+  a girl watering plants by a sunny window, cozy room, hand-drawn anime, soft watercolor
+  texture, organic linework, natural sunlight, warm ambient lighting, medium shot,
+  peaceful healing atmosphere --niji 6 --ar 16:9 --no text, watermark, harsh shadows

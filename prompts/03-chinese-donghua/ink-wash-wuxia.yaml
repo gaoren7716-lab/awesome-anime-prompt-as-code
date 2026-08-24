@@ -1,0 +1,28 @@
+id: ink-wash-wuxia-v1
+title: 水墨武侠
+version: v1.0
+category: [chinese]
+tags: [水墨, 武侠, 留白]
+description: 拍人走进江湖：留白写意，少即是多；灵魂是 negative space。
+input_variables:
+  subject: { default: "a lone swordsman", description: "画面主体" }
+  action: { default: "dynamic martial arts pose", description: "动作" }
+style:
+  base_system_en: [Chinese ink wash animation, wuxia aesthetic]
+  rendering_en: [ink painting style, expressive brush strokes]
+cinematography:
+  lighting_en: [soft diffused lighting]
+  camera_en: [extreme wide shot]
+  environment_en: ["misty mountain path"]
+  mood_en: ["serene tense atmosphere"]
+prompt_template: |
+  {{subject}}, {{action}},
+  Chinese ink wash animation, wuxia aesthetic, ink painting style,
+  expressive brush strokes, negative space, subtle paper texture,
+  soft diffused lighting, extreme wide shot,
+  misty mountain path, serene tense atmosphere
+negative_prompt: ["vibrant saturated colors, thick outlines, cel shading, detailed urban background", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "21:9"
+platforms: [gpt-image-2, midjourney-niji, flux, sdxl, jimeng-kling]
+notes_zh: 水墨=少/留白多/人融入天地；镜头 wide 或 extreme wide。

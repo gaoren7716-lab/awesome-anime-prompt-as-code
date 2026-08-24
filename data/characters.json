@@ -1,0 +1,46 @@
+{
+  "$comment": "角色设计模板库。与 schemas/character-bible.schema.json 配合使用：把任一模板固化为角色圣经即可获得跨场景一致性。",
+  "characters": [
+    {
+      "id": "cold-detective",
+      "name_zh": "冷峻型男主（侦探）",
+      "identity_en": "mature male detective, private investigator",
+      "appearance_en": ["sharp jawline", "deep-set eyes", "restrained expression"],
+      "outfit_en": ["tailored dark coat", "subtle watch", "leather gloves"],
+      "props_en": ["torn photograph", "case file"],
+      "style_fit": ["seinen", "crime-suspense"],
+      "lighting_camera": ["hard side lighting", "dramatic shadows", "medium close-up"],
+      "environment_en": ["dim rainy urban background"],
+      "mood_en": ["guarded stoic atmosphere"]
+    },
+    {
+      "id": "charismatic-villain",
+      "name_zh": "魅力反派",
+      "identity_en": "mature male antagonist",
+      "appearance_en": ["sharp cold eyes", "subtle smirk"],
+      "outfit_en": ["dark elegant tailored clothing", "ornate ring", "black gloves"],
+      "props_en": ["chess piece in hand"],
+      "style_fit": ["dark-fantasy-western", "seinen"],
+      "lighting_camera": ["low-key lighting", "cold rim light", "low angle shot"],
+      "environment_en": ["dim gothic interior", "city lights outside the window"],
+      "mood_en": ["menacing charismatic atmosphere"]
+    },
+    {
+      "id": "hot-blooded-hero",
+      "name_zh": "热血硬汉",
+      "identity_en": "rugged male protagonist",
+      "appearance_en": ["muscular build", "rugged facial features", "battle scars"],
+      "outfit_en": ["worn tactical clothing"],
+      "style_fit": ["shonen"],
+      "lighting_camera": ["hard lighting", "dynamic action shot", "dust and smoke in the air"],
+      "environment_en": ["battlefield background"],
+      "mood_en": ["fierce determined atmosphere"],
+      "notes_zh": "以经历痕迹（伤疤/磨损装备）而非 handsome/muscular 展现硬汉感。"
+    }
+  ],
+  "game_archetypes": [
+    { "id": "jrpg-card", "name_zh": "JRPG 角色卡", "see": "prompts/05-game-character/jrpg-card.yaml" },
+    { "id": "gacha-standing", "name_zh": "抽卡立绘", "see": "prompts/05-game-character/gacha-standing.yaml" },
+    { "id": "battle-dynamic", "name_zh": "战斗动态立绘", "see": "prompts/05-game-character/battle-dynamic.yaml" }
+  ]
+}

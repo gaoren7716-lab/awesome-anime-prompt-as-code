@@ -1,0 +1,26 @@
+id: storybook-v1
+title: 绘本动漫
+version: v1.0
+category: [hand-drawn]
+tags: [绘本, 童话, 环境叙事]
+description: 核心是 simple organic shapes；绘本适合 wide shot 与环境叙事。
+input_variables:
+  subject: { default: "a small fox and a child walking together", description: "画面主体" }
+style:
+  base_system_en: ["storybook illustration", "hand-drawn anime"]
+  rendering_en: ["watercolor texture", "simple organic shapes", "painted background", "subtle paper texture"]
+cinematography:
+  lighting_en: ["warm soft lighting"]
+  camera_en: ["wide shot"]
+  environment_en: ["whimsical fantasy environment"]
+  mood_en: ["warm colors", "whimsical atmosphere"]
+prompt_template: |
+  {{subject}},
+  storybook illustration, hand-drawn anime,
+  watercolor texture, simple organic shapes, painted background, subtle paper texture,
+  warm soft lighting, wide shot,
+  whimsical fantasy environment, warm colors, whimsical atmosphere
+negative_prompt: ["dark gritty atmosphere", "hyper detailed rendering", "realistic proportions", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "3:2"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "jimeng-kling"]

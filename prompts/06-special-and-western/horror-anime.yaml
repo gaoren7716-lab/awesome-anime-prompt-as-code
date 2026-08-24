@@ -1,0 +1,28 @@
+id: horror-anime-v1
+title: 恐怖动漫
+version: v1.0
+category: [special]
+tags: [恐怖, 心理惊悚]
+description: 心理恐怖优先；desaturated + eerie + dutch angle 比堆 blood/gore 更稳。
+input_variables:
+  subject: { default: "a girl turning toward something unseen", description: "画面主体" }
+style:
+  base_system_en: ["horror anime", "dark anime"]
+  rendering_en: ["desaturated colors", "deep shadows"]
+cinematography:
+  lighting_en: ["eerie lighting", "dim lighting"]
+  camera_en: ["extreme close-up", "dutch angle"]
+  environment_en: ["abandoned building", "dark corridor"]
+  mood_en: ["psychological horror", "disturbing atmosphere"]
+prompt_template: |
+  {{subject}},
+  horror anime, dark anime,
+  desaturated colors, deep shadows,
+  eerie lighting, dim lighting,
+  extreme close-up, dutch angle,
+  abandoned building, dark corridor,
+  psychological horror, disturbing atmosphere
+negative_prompt: ["blood splatter", "gore", "bright cheerful colors", "cute style", "text", "watermark"]
+suggested_settings:
+  aspect_ratio: "2:3"
+platforms: ["gpt-image-2", "midjourney-niji", "flux", "sdxl"]

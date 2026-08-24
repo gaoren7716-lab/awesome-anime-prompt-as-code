@@ -1,0 +1,43 @@
+{
+  "$comment": "负面提示词库。canonical negatives 是跨平台通用基准；style_avoid 是该风格下禁止出现的正向词（同样进入负向/规避指令）。平台差异见 data/model-adapters.json：GPT-Image-2 无负向字段，须改写为自然语言规避指令。",
+  "universal_quality": [
+    "extra fingers",
+    "malformed hands",
+    "duplicated limbs",
+    "extra limbs",
+    "fused fingers",
+    "bad anatomy",
+    "distorted face",
+    "asymmetrical eyes",
+    "text",
+    "subtitles",
+    "watermark",
+    "logo",
+    "signature",
+    "blurry",
+    "low resolution",
+    "jpeg artifacts"
+  ],
+  "style_avoid": {
+    "hand-drawn-family": ["clean lineart", "perfect linework", "sharp outlines", "ultra polished", "hyper detailed"],
+    "cel-shading": ["soft shading", "subtle gradients", "soft blending", "rich brush strokes"],
+    "impasto": ["clean lineart", "flat colors", "hard shadows"],
+    "watercolor": ["hard shadows", "thick outlines", "high saturation"],
+    "shoujo-girl-system": ["realistic proportions", "gritty realism", "desaturated colors", "heavy shadows"],
+    "seinen-crime": ["chibi", "cute childish expression", "exaggerated large sparkling eyes", "pastel colors"],
+    "horror-psychological": ["blood splatter", "gore", "bright cheerful colors"],
+    "cyberpunk": ["rural landscape", "warm rustic tones", "daylight pastel palette"],
+    "ink-wash": ["vibrant saturated colors", "thick outlines", "cel shading", "detailed urban background"],
+    "gongbi": ["rough brush strokes", "abstract washes", "negative space composition"],
+    "western-comic": ["large sparkling eyes", "soft pastel colors", "clean anime lineart"],
+    "retro-1980s": ["modern polished rendering", "digital gradients", "neon colors"],
+    "storybook": ["dark gritty atmosphere", "hyper detailed rendering"]
+  },
+  "platform_notes": {
+    "sdxl": "直接使用 negative_prompt 字段，逐条映射。",
+    "midjourney-niji": "用 --no 参数收纳，单条 --no 内逗号分隔；参数过多会稀释权重，建议取前 6-8 条。",
+    "gpt-image-2": "无独立负向字段。改写为自然语言约束追加在正向指令后，如 'Do not include: text, watermark, extra fingers.'",
+    "flux": "无负向通道。把高风险词转成正向描述对冲，如用 'five fingers on each hand' 对抗多指。",
+    "jimeng-kling": "支持中文负面词输入框，直接翻译填写。"
+  }
+}
