@@ -92,4 +92,82 @@ Full rules: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 **License**: MIT • **中文文档**: [README.zh-CN.md](README.zh-CN.md)
 
+
+
+① 90年代校园怀旧
+
+```
+Japanese anime, 1990s anime, shoujo anime, retro cel animation,
+hand-drawn lineart, golden hour, warm sunset light, medium shot,
+Japanese high school rooftop, nostalgic mood, youthful atmosphere
+```
+
+适合：青春/校园题材
+
+![90年代校园怀旧](https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/90%E5%B9%B4%E4%BB%A3%E6%A0%A1%E5%9B%AD%E6%80%80%E6%97%A7.png?raw=true)
+
+
+
+② 赛博朋克少女
+
+```
+cyberpunk anime, futuristic anime, semi-realistic anime, detailed rendering,
+neon lighting, rim lighting, low angle shot, futuristic city, rainy street,
+dark atmosphere, tense mood
+```
+
+适合：科幻/都市题材
+
+![赛博朋克少女](https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B%E5%B0%91%E5%A5%B3.png?raw=true)
+
+③ 国风仙侠
+
+```
+Chinese animation, xianxia aesthetic, Chinese cultivation fantasy,
+ink wash, detailed brushwork, volumetric light, wide cinematic shot,
+misty mountains, ancient Chinese architecture, mysterious atmosphere, epic mood
+```
+
+适合：古风/玄幻题材
+
+![国风仙侠](https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/%E5%9B%BD%E9%A3%8E%E4%BB%99%E4%BE%A0.png?raw=true)
+
+④ 水墨武侠
+
+```
+Chinese ink wash animation, wuxia aesthetic, ink painting,
+expressive brush strokes, traditional Chinese clothing, misty mountains,
+negative space, dynamic martial arts pose
+```
+
+适合：武侠/江湖题材
+
+![水墨武侠](https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/%E6%B0%B4%E5%A2%A8%E6%AD%A6%E4%BE%A0.png?raw=true)
+
+⑤ 治愈系日常
+
+```
+hand-drawn anime, soft watercolor texture, warm natural lighting,
+pastel colors, medium shot, lush greenery, cozy environment,
+peaceful atmosphere
+```
+
+适合：日常/慢生活题材
+
+![治愈系日常](https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/%E6%B2%BB%E6%84%88%E7%B3%BB%E6%97%A5%E5%B8%B8.png?raw=true)
+
+⑥ 黑暗心理向
+
+```
+dark anime, mature character design, deep shadows, desaturated colors,
+dramatic lighting, close-up shot, ruined buildings,
+psychological atmosphere, tense mood
+```
+
+适合：悬疑/犯罪题材
+
+![黑暗心理向](https://github.com/gaoren7716-lab/awesome-anime-prompt-as-code/blob/main/%E9%BB%91%E6%9A%97%E5%BF%83%E7%90%86%E5%90%91.png?raw=true)
+
+
+
 </div>
