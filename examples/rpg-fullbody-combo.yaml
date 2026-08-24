@@ -1,0 +1,48 @@
+# 案例 11：RPG 全身立绘（设定图）组合 —— 角色设定集、TRPG 跑团用图
+# 来源：作者《动漫Prompt系列03》原创组合，下方示例图即由该提示词生成（MIT 授权）
+# 预览图：images/rpg-fullbody-01.jpg、images/rpg-fullbody-02.jpg
+# 用法：纯风格组合可直接复制使用；需要指定角色时，在提示词最前面加一句主体描述即可。
+template_ref: prompts/05-game-character/rpg-fullbody.yaml
+
+style:
+  base_system_en: ["fantasy RPG character illustration", "anime game art"]
+  rendering_en: ["detailed rendering", "textured painting"]
+
+cinematography:
+  lighting_en: ["natural lighting", "volumetric light"]
+  camera_en: ["full body shot", "three-quarter view"]
+  environment_en: ["fantasy background", "detailed costume"]
+  mood_en: ["character concept art", "immersive atmosphere"]
+
+composition_notes: 四分之三视角全身像，保证服装分层可读；环境光自然过渡，突出概念设计感。
+
+# ---------- GPT-Image-2（指令式，负面词改写为规避句） ----------
+gpt_image_2: |
+  fantasy RPG character illustration, anime game art,
+  detailed rendering, textured painting,
+  natural lighting, volumetric light,
+  full body shot, three-quarter view,
+  fantasy background, detailed costume,
+  character concept art, immersive atmosphere.
+  Do not include: busy composition hiding the silhouette, close-up crop,
+  text, watermark.
+
+# ---------- Midjourney Niji ----------
+midjourney_niji: |
+  fantasy RPG character illustration, anime game art, detailed rendering,
+  textured painting, natural lighting, volumetric light, full body shot,
+  three-quarter view, fantasy background, detailed costume,
+  character concept art, immersive atmosphere
+  --niji 6 --ar 9:16 --no busy composition, close-up crop, text, watermark
+
+# ---------- SDXL ----------
+sdxl:
+  positive: |
+    fantasy RPG character illustration, anime game art, detailed rendering,
+    textured painting, natural lighting, volumetric light, full body shot,
+    three-quarter view, fantasy background, detailed costume,
+    character concept art, immersive atmosphere, masterpiece, best quality
+  negative: |
+    busy composition hiding the silhouette, close-up crop, text, watermark,
+    extra fingers, malformed hands, low resolution
+  settings: { steps: 30, cfg: 6.0, sampler: "DPM++ 2M Karras" }

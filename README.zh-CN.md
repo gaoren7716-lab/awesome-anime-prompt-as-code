@@ -28,6 +28,7 @@
 - 🔁 **角色一致性协议** —— Character Bible 冻结锚点，跨场景不漂移
 - 🔌 **模型适配层** —— 同一 YAML 自动适配 GPT-Image-2 / Midjourney niji / Flux / SDXL / 即梦 / 可灵
 - 🤖 **Agent Skill** —— `skills/anime-prompt-library` 可直接装入 Claude Code / Cursor 等 Agent 使用
+- 🖼️ **游戏角色四件套实测画廊** —— 真实生成图预览 + 一键复制提示词：[docs/game-character-gallery.md](docs/game-character-gallery.md)
 
 > 差异化定位：参考 [awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2) 的结构化思路，但其主轴是 UI/商业图/信息图；**动漫、国漫漫画镜头语言与剧情首帧控制是本仓库的主轴**。
 
@@ -88,12 +89,13 @@ awesome-anime-prompt-as-code/
 │  ├─ anime-prompt.schema.json
 │  └─ character-bible.schema.json
 ├─ prompts/                   # 49 个 YAML 模板（10 大类）
-├─ examples/                  # 完整案例（三平台适配输出）
+├─ examples/                  # 完整案例（三平台适配输出 + 真实预览图）
 ├─ docs/
 │  ├─ prompt-formula.md       # 7 层公式教学
 │  ├─ style-conflicts.md      # 风格冲突规则（避坑核心）
 │  ├─ model-guides.md         # 平台适配指南
 │  ├─ character-consistency.md# 角色一致性协议
+│  ├─ game-character-gallery.md # 游戏角色四件套实测画廊（图片+一键复制）
 │  └─ open-source-roadmap.md  # 路线图
 └─ skills/anime-prompt-library/SKILL.md   # Agent Skill
 ```

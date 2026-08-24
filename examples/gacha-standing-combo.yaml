@@ -1,0 +1,48 @@
+# 案例 10：二次元手游 / 抽卡立绘组合 —— 仿米哈游/鹰角调性，接手游外包最常被要求的配方
+# 来源：作者《动漫Prompt系列03》原创组合，下方示例图即由该提示词生成（MIT 授权）
+# 预览图：images/gacha-standing-01.jpg、images/gacha-standing-02.jpg
+# 用法：纯风格组合可直接复制使用；需要指定角色时，在提示词最前面加一句主体描述即可。
+template_ref: prompts/05-game-character/gacha-standing.yaml
+
+style:
+  base_system_en: ["modern anime", "anime mobile game character", "gacha game artwork"]
+  rendering_en: ["semi-realistic anime", "polished character design"]
+
+cinematography:
+  lighting_en: ["cinematic lighting", "soft rim light"]
+  camera_en: ["medium close-up"]
+  environment_en: ["detailed costume", "sparkling effects"]
+  mood_en: ["vibrant colors", "high saturation"]
+
+composition_notes: 中近景聚焦角色面部与服装上半部；特效元素围绕角色点缀，不遮挡主体。
+notes_zh: 四套组合里最容易被甲方打回的一套——"精致感"难量化。问题多出在 semi-realistic anime 的强度：加多了像插画不像手游，加少了显糊。建议从本组合的原剂量起步微调。
+
+# ---------- GPT-Image-2（指令式，负面词改写为规避句） ----------
+gpt_image_2: |
+  modern anime, anime mobile game character, gacha game artwork,
+  semi-realistic anime, polished character design,
+  cinematic lighting, soft rim light,
+  medium close-up,
+  detailed costume, sparkling effects,
+  vibrant colors, high saturation.
+  Do not include: busy background overpowering the character, rough sketch texture,
+  muted colors, text, watermark.
+
+# ---------- Midjourney Niji ----------
+midjourney_niji: |
+  modern anime, anime mobile game character, gacha game artwork, semi-realistic anime,
+  polished character design, cinematic lighting, soft rim light, medium close-up,
+  detailed costume, sparkling effects, vibrant colors, high saturation
+  --niji 6 --ar 9:16 --no busy background, rough sketch texture, muted colors, text, watermark
+
+# ---------- SDXL ----------
+sdxl:
+  positive: |
+    modern anime, anime mobile game character, gacha game artwork, semi-realistic anime,
+    polished character design, cinematic lighting, soft rim light, medium close-up,
+    detailed costume, sparkling effects, vibrant colors, high saturation,
+    masterpiece, best quality
+  negative: |
+    busy background overpowering the character, rough sketch texture, muted colors,
+    text, watermark, extra fingers, malformed hands, low resolution
+  settings: { steps: 30, cfg: 6.0, sampler: "DPM++ 2M Karras" }

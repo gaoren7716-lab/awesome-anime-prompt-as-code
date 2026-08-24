@@ -27,6 +27,7 @@ Most prompt libraries copy nice sentences. This project **engineers** anime visu
 - 🔁 **Character consistency protocol** — Character Bible freezes anchors; no drift across scenes.
 - 🔌 **Model adapter layer** — one YAML, auto-adapted to GPT-Image-2 / Midjourney niji / Flux / SDXL / Jimeng / Kling.
 - 🤖 **Agent Skill** — drop `skills/anime-prompt-library` into Claude Code / Cursor.
+- 🖼️ **Game-character pack, field-tested** — 4 combos with real generated previews & one-click copy: [docs/game-character-gallery.md](docs/game-character-gallery.md).
 
 > Positioning: inspired by [awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)'s structured approach — but their axis is UI/commercial/infographics. **Anime, donghua camera language and narrative first-frame control are this repo's axis.**
 
@@ -75,8 +76,8 @@ ajv validate -s schemas/anime-prompt.schema.json -d your-template.yaml --all-err
 data/          # 9 layered vocabularies (JSON)
 schemas/       # JSON Schemas: anime-prompt + character-bible
 prompts/       # 49 YAML templates in 10 categories
-examples/      # full cases with per-platform adapted output
-docs/          # formula, conflicts, model guides, consistency, roadmap
+examples/      # full cases with per-platform adapted output (+ real previews)
+docs/          # formula, conflicts, model guides, consistency, game-character gallery, roadmap
 skills/        # Agent Skill
 ```
 

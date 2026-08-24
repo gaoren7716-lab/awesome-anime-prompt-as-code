@@ -1,0 +1,52 @@
+# 案例 12：战斗立绘（动态）组合 —— 技能特效展示图、卡牌游戏战斗画面
+# 来源：作者《动漫Prompt系列03》原创组合，下方示例图即由该提示词生成（MIT 授权）
+# 预览图：images/battle-dynamic-01.jpg、images/battle-dynamic-02.jpg
+# 用法：纯风格组合可直接复制使用；需要指定角色时，在提示词最前面加一句主体描述即可。
+template_ref: prompts/05-game-character/battle-dynamic.yaml
+
+subject:
+  type_en: "battle-ready game character"
+  outfit_en: ["flowing clothing"]
+  appearance_en: ["intense expression"]
+
+style:
+  base_system_en: ["anime battle character", "JRPG character art"]
+  rendering_en: ["semi-realistic anime", "dynamic rendering"]
+
+cinematography:
+  lighting_en: ["dramatic lighting"]
+  camera_en: ["dynamic action shot", "low angle shot"]
+  environment_en: ["speed lines", "action effects"]
+  mood_en: ["high-energy atmosphere"]
+
+composition_notes: 低角度+动作镜头制造冲击力；速度线和特效包裹角色，强化动感张力。
+
+# ---------- GPT-Image-2（指令式，负面词改写为规避句） ----------
+gpt_image_2: |
+  anime battle character, JRPG character art,
+  semi-realistic anime, dynamic rendering,
+  dramatic lighting, speed lines,
+  dynamic action shot, low angle shot,
+  flowing clothing, action effects,
+  high-energy atmosphere, intense expression.
+  Do not include: static standing pose, calm empty background, pastel softness,
+  text, watermark.
+
+# ---------- Midjourney Niji ----------
+midjourney_niji: |
+  anime battle character, JRPG character art, semi-realistic anime, dynamic rendering,
+  dramatic lighting, speed lines, dynamic action shot, low angle shot,
+  flowing clothing, action effects, high-energy atmosphere, intense expression
+  --niji 6 --ar 16:9 --no static pose, calm empty background, pastel softness, text, watermark
+
+# ---------- SDXL ----------
+sdxl:
+  positive: |
+    anime battle character, JRPG character art, semi-realistic anime, dynamic rendering,
+    dramatic lighting, speed lines, dynamic action shot, low angle shot,
+    flowing clothing, action effects, high-energy atmosphere, intense expression,
+    masterpiece, best quality
+  negative: |
+    static standing pose, calm empty background, pastel softness, text, watermark,
+    extra fingers, malformed hands, low resolution
+  settings: { steps: 30, cfg: 6.0, sampler: "DPM++ 2M Karras" }
